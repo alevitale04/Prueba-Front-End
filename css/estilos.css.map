@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAC,GACA,MAAM,EAAE,CAAC,EACT,OAAO,EAAE,CAAC,EACV,UAAU,EAAE,UAAU;;AAGvB,IAAK,GAEJ,WAAW,EAAE,oBAAoB,EACjC,SAAS,EAAE,IAAI",
+"sources": ["_generales.scss"],
+"names": [],
+"file": "estilos.css"
+}
