@@ -12,27 +12,55 @@
                         background: rgb(255, 255, 255);
                         border-top-right-radius: 4px;
                         border-bottom-right-radius: 4px;
+                        padding-left: 10px;
 
                             .titulo{
 
                                 width: 100%;
                                 height: 35px;
-                                background: rgb(251, 197, 0);
+
+                                    .tituloTexto{
+
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        padding-top: 7px;
+                                        color: rgb(46, 180, 238);
+                                    }
                             }
 
                             .ubicacion{
 
                                 width: 100%;
                                 height: 50px;
-                                background: rgb(28, 108, 121);
+
+                                    .ubicacionTexto{
+
+                                        font-size: 13px;
+                                        font-weight: 600;
+
+                                    }
 
                             }
+
 
                             .descripcion{
 
                                 width: 100%;
                                 height: 65px;
-                                background: rgb(133, 18, 110);
+                                
+                                
+
+                                    .descripcionTexto{
+                                        
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        color: rgba(0, 0, 0,0.5);
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical; 
+                                        overflow: hidden;
+
+                                    }
 
                             }
 
