@@ -30,14 +30,25 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
 .contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
 .contenedor .filtro .tipoOperacion .opciones { display: flex; flex-direction: column; width: 100%; }
-.contenedor .filtro .tipoOperacion .opciones .opcion { margin-bottom: 10px; margin-left: 2px; display: flex; align-items: center; cursor: pointer; }
+.contenedor .filtro .tipoOperacion .opciones .opcion { margin-bottom: 10px; margin-left: 2px; display: flex; align-items: center; width: 90px; cursor: pointer; }
 .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 13px; margin-left: 10px; }
 
 .contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
-.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; justify-content: space-between; }
-.contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; max-height: 200px; min-height: 200px; background: #a8a8a8; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
-.contenedor .avisos .aviso .galeria .imagengaleria { max-width: 240px; min-width: 240px; max-height: 150px; min-height: 150px; background: #a9eff0; border-top-left-radius: 4px; }
-.contenedor .avisos .aviso .galeria .costos { max-width: 240px; min-width: 240px; max-height: 50px; min-height: 50px; background: white; border-bottom-left-radius: 4px; }
-.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; max-height: 200px; min-height: 200px; background: #a8a8a8; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; }
+.contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; height: 200px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.contenedor .avisos .aviso .galeria .imagengaleria { max-width: 250px; min-width: 250px; height: 150px; border-top-left-radius: 4px; overflow: hidden; background-image: url("../imagenes/aviso3/2.jpg"); background-size: cover; }
+.contenedor .avisos .aviso .galeria .imagengaleria .adornos { display: flex; justify-content: space-between; align-content: center; width: 240px; margin-top: 10px; }
+.contenedor .avisos .aviso .galeria .imagengaleria .adornos p { color: #fff; font-size: 13px; margin-left: 10px; text-shadow: 1px 1px 3px black; }
+.contenedor .avisos .aviso .galeria .imagengaleria .adornos .corazon { color: #FFF; text-shadow: 1px 1px 3px black; cursor: pointer; }
+.contenedor .avisos .aviso .galeria .imagengaleria .flechas { color: #fff; display: flex; justify-content: space-between; align-content: center; width: 230px; margin-left: 10px; font-size: 20px; margin-top: 45px; text-shadow: 1px 1px 3px black; }
+.contenedor .avisos .aviso .galeria .imagengaleria .flechas .atras { cursor: pointer; }
+.contenedor .avisos .aviso .galeria .imagengaleria .flechas .adelante { cursor: pointer; }
+.contenedor .avisos .aviso .galeria .imagengaleria .contador { width: 60px; height: 20px; background: rgba(0, 0, 0, 0.6); border-radius: 5px; margin-top: 33px; margin-left: 180px; display: flex; justify-content: center; align-items: center; }
+.contenedor .avisos .aviso .galeria .imagengaleria .contador i { color: #fff; font-size: 10px; }
+.contenedor .avisos .aviso .galeria .imagengaleria .contador p { color: #fff; font-size: 10px; margin-left: 4px; }
+.contenedor .avisos .aviso .galeria .costos { max-width: 250px; min-width: 250px; height: 40px; background: white; border-bottom-left-radius: 4px; padding-left: 10px; border-right: 1px solid rgba(168, 166, 166, 0.4); margin-top: 5px; }
+.contenedor .avisos .aviso .galeria .costos .precio { width: 100%; height: 25px; font-weight: 600; font-size: 20px; }
+.contenedor .avisos .aviso .galeria .costos .expensas { width: 100%; height: 15px; font-size: 10px; font-weight: 300; padding-top: 3px; }
+.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; height: 200px; background: white; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 
 /*# sourceMappingURL=estilos.css.map */
