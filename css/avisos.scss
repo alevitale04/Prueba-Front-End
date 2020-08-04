@@ -2,9 +2,58 @@
 
         .avisos{
 
-            max-width: 620px;
-            min-width: 620px;
-            height: 600px;
-            background: rgb(248, 13, 13);
+            max-width: 720px;
+            min-width: 720px;
+            height: auto;
+
+                .aviso{
+
+                    max-width: 720px;
+                    min-width: 720px;
+                    height: 200px;
+                    background: rgb(255, 255, 255);
+                    border-radius: 3px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                        .galeria{
+
+                            max-width: 250px;
+                            min-width: 250px;
+                            max-height: 200px;
+                            min-height: 200px;
+                            background: rgb(168, 168, 168);
+
+                                .imagengaleria{
+
+                                     max-width: 240px;
+                                     min-width: 240px;
+                                     max-height: 150px;
+                                     min-height: 150px;
+                                     background: rgb(169, 239, 240);
+                                }
+
+                                .costos{
+
+                                     max-width: 240px;
+                                     min-width: 240px;
+                                     max-height: 50px;
+                                     min-height: 50px;
+                                     background: rgb(255, 255, 255);
+                                }
+                        }
+
+                        .contenido{
+
+                            max-width: 470px;
+                            min-width: 470px;
+                            max-height: 200px;
+                            min-height: 200px;
+                            background: rgb(168, 168, 168);
+
+                        }
+                }
         }
 }

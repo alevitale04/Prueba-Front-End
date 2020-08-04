@@ -4,7 +4,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 
 .oculto { display: none; }
 
-.contenedor { margin: 30px auto; max-width: 900px; min-width: 900px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
+.contenedor { margin: 30px auto; max-width: 1000px; min-width: 1000px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
 
 .contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 310px; min-height: 180px; background: white; border-radius: 3px; }
 .contenedor .filtro .filtrado { padding: 10px; display: flex; flex-direction: column; }
@@ -16,23 +16,28 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .direccion { width: 100%; padding: 5px 0 10px 0; }
 .contenedor .filtro .direccion .direccionIndice { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 .contenedor .filtro .direccion .direccionIndice .direccionTexto { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 600; }
-.contenedor .filtro .direccion .direccionIndice .direccionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
-.contenedor .filtro .direccion .direccionIndice .direccionflechaArriba { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .direccion .direccionIndice .direccionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
+.contenedor .filtro .direccion .direccionIndice .direccionflechaArriba { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
 .contenedor .filtro .direccion .BucarDireccion { display: flex; margin-top: 5px; }
-.contenedor .filtro .direccion .BucarDireccion input[type="text"] { height: 30px; padding: 10px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); width: 200px; font-size: 10px; }
+.contenedor .filtro .direccion .BucarDireccion input[type="text"] { height: 30px; padding: 10px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); width: 200px; font-size: 10px; cursor: pointer; }
 .contenedor .filtro .direccion .BucarDireccion input[type="text"]:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
-.contenedor .filtro .direccion .BucarDireccion .enviar { background: #fff; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); margin-left: 10px; width: 40px; text-align: center; }
+.contenedor .filtro .direccion .BucarDireccion .enviar { background: #fff; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); margin-left: 10px; width: 40px; text-align: center; cursor: pointer; }
 .contenedor .filtro .direccion .BucarDireccion .enviar i { font-size: 13px; color: #37d3eb; }
 .contenedor .filtro .direccion .BucarDireccion .enviar:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
 .contenedor .filtro .tipoOperacion { width: 100%; display: flex; flex-direction: column; margin-bottom: 10px; }
 .contenedor .filtro .tipoOperacion .operacionIndice { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 .contenedor .filtro .tipoOperacion .operacionIndice .operacionTexto { width: 100%; margin-top: 10px; margin-bottom: 10px; font-size: 15px; font-weight: 600; }
-.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
-.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
+.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; cursor: pointer; }
 .contenedor .filtro .tipoOperacion .opciones { display: flex; flex-direction: column; width: 100%; }
-.contenedor .filtro .tipoOperacion .opciones .opcion { margin-bottom: 10px; margin-left: 2px; display: flex; align-items: center; }
+.contenedor .filtro .tipoOperacion .opciones .opcion { margin-bottom: 10px; margin-left: 2px; display: flex; align-items: center; cursor: pointer; }
 .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 13px; margin-left: 10px; }
 
-.contenedor .avisos { max-width: 620px; min-width: 620px; height: 600px; background: #f80d0d; }
+.contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 3px; margin-bottom: 10px; display: flex; flex-direction: row; justify-content: space-between; }
+.contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; max-height: 200px; min-height: 200px; background: #a8a8a8; }
+.contenedor .avisos .aviso .galeria .imagengaleria { max-width: 240px; min-width: 240px; max-height: 150px; min-height: 150px; background: #a9eff0; }
+.contenedor .avisos .aviso .galeria .costos { max-width: 240px; min-width: 240px; max-height: 50px; min-height: 50px; background: white; }
+.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; max-height: 200px; min-height: 200px; background: #a8a8a8; }
 
 /*# sourceMappingURL=estilos.css.map */
