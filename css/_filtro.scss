@@ -1,0 +1,214 @@
+.contenedor{
+
+        .filtro{
+
+             max-width: 260px;
+             min-width: 260px;
+             max-height: 300px;
+             min-height: 250px;
+             background: rgb(255, 255, 255);
+             border-radius: 3px;
+
+                .filtrado{
+
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                        .separador{
+
+                            background: rgb(224, 223, 223);
+                            border: 0.5px solid rgb(224, 223, 223);
+                        }
+
+                        .filtracion{
+
+                            width: 100%;
+                            height: auto;
+                            // overflow: hidden;
+
+                            .filtradoActual{
+                                width: 100%;
+                                margin-top: 5px;
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                font-weight: 500;
+
+                            }
+
+                            .filtrados{
+
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                margin-bottom: 3px;
+                                
+
+                                    p{
+                                        font-size: 8px;
+                                        margin: 2px 3px;
+                                        padding-top: 3px;
+                                        background: rgb(224, 223, 223);
+                                        width: 85px;
+                                        height: 15px;
+                                        text-align: center;
+                                        border-radius: 20px;
+                                        font-weight: 600;
+                                        color: rgb(0, 0, 0);
+                                    }
+
+                            }
+                            
+                        }
+
+                }
+
+
+                .direccion{
+                    width: 100%;
+                    padding: 5px 0 10px 0;
+
+                        .direccionIndice{
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+
+                                .direccionTexto{
+
+                                    width: 100%;
+                                    margin-top: 5px;
+                                    margin-bottom: 10px;
+                                    font-size: 15px;
+                                    font-weight: 500;
+
+                                }
+
+                                .direccionflechaAbajo{
+
+                                    margin-top: -2px;
+                                    margin-right: 10px;
+                                    font-size: 12px;
+
+                                }
+                                .direccionflechaArriba{
+
+                                    margin-top: -2px;
+                                    margin-right: 10px;
+                                    font-size: 12px;
+
+                                }
+
+
+                        }
+
+                        .BucarDireccion{
+
+                            display: flex;
+                            margin-top: 5px;
+
+                                input[type="text"]{
+
+                                    height: 30px;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    border: 1px solid rgba(0, 0, 0, 0.3);
+                                    width: 200px;
+                                    font-size: 10px;
+
+                                    &:focus{
+                                    outline: none;
+                                    border-radius: 5px;
+                                    border: 1px solid rgba(0, 0, 0, 0.3);
+
+                                    }
+
+                                        
+                                } 
+
+                                .enviar{
+
+                                    background: #fff;
+                                    border-radius: 5px;
+                                    border: 1px solid rgba(0, 0, 0, 0.3);
+                                    margin-left: 10px;
+                                    width: 40px;
+                                    text-align: center;
+
+                                        i{
+
+                                            font-size: 13px;
+                                            color: rgb(55, 211, 235);
+                                        }
+
+                                        &:focus{
+                                            outline: none;
+                                            border-radius: 5px;
+                                            border: 1px solid rgba(0, 0, 0, 0.3);
+        
+                                            }
+                                }
+
+
+                        }
+
+  
+
+
+                }
+
+                .tipoOperacion{
+
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    .operacionIndice{
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+
+                            .operacionTexto{
+
+                                width: 100%;
+                                margin-top: 5px;
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                font-weight: 500;
+
+                            }
+
+                            .operacionflechaAbajo{
+
+                                margin-top: -2px;
+                                margin-right: 10px;
+                                font-size: 12px;
+
+                            }
+                            .operacionflechaAbajo{
+
+                                margin-top: -2px;
+                                margin-right: 10px;
+                                font-size: 12px;
+
+                            }
+
+
+                    }
+
+                    .opciones{
+
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                }
+        }
+
+}

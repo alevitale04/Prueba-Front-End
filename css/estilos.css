@@ -1,5 +1,36 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { font-family: 'Roboto', sans-serif; font-size: 16px; }
+body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; }
+
+.oculto { display: none; }
+
+.contenedor { margin: 30px auto; max-width: 900px; min-width: 900px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
+
+.contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 300px; min-height: 250px; background: white; border-radius: 3px; }
+.contenedor .filtro .filtrado { padding: 10px; display: flex; flex-direction: column; }
+.contenedor .filtro .filtrado .separador { background: #e0dfdf; border: 0.5px solid #e0dfdf; }
+.contenedor .filtro .filtrado .filtracion { width: 100%; height: auto; }
+.contenedor .filtro .filtrado .filtracion .filtradoActual { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 500; }
+.contenedor .filtro .filtrado .filtracion .filtrados { width: 100%; height: auto; display: flex; margin-bottom: 3px; }
+.contenedor .filtro .filtrado .filtracion .filtrados p { font-size: 8px; margin: 2px 3px; padding-top: 3px; background: #e0dfdf; width: 85px; height: 15px; text-align: center; border-radius: 20px; font-weight: 600; color: black; }
+.contenedor .filtro .direccion { width: 100%; padding: 5px 0 10px 0; }
+.contenedor .filtro .direccion .direccionIndice { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.contenedor .filtro .direccion .direccionIndice .direccionTexto { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 500; }
+.contenedor .filtro .direccion .direccionIndice .direccionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .direccion .direccionIndice .direccionflechaArriba { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .direccion .BucarDireccion { display: flex; margin-top: 5px; }
+.contenedor .filtro .direccion .BucarDireccion input[type="text"] { height: 30px; padding: 10px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); width: 200px; font-size: 10px; }
+.contenedor .filtro .direccion .BucarDireccion input[type="text"]:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
+.contenedor .filtro .direccion .BucarDireccion .enviar { background: #fff; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); margin-left: 10px; width: 40px; text-align: center; }
+.contenedor .filtro .direccion .BucarDireccion .enviar i { font-size: 13px; color: #37d3eb; }
+.contenedor .filtro .direccion .BucarDireccion .enviar:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
+.contenedor .filtro .tipoOperacion { width: 100%; height: auto; display: flex; flex-direction: column; }
+.contenedor .filtro .tipoOperacion .operacionIndice { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.contenedor .filtro .tipoOperacion .operacionIndice .operacionTexto { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 500; }
+.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: -2px; margin-right: 10px; font-size: 12px; }
+.contenedor .filtro .tipoOperacion .opciones { display: flex; flex-direction: column; width: 100%; }
+
+.contenedor .avisos { max-width: 620px; min-width: 620px; height: 600px; background: #f80d0d; }
 
 /*# sourceMappingURL=estilos.css.map */

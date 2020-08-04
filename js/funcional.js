@@ -1,4 +1,9 @@
-const crearAviso = (posting_id,address,zone,city,operation_type,price_amount,price_currency,expenses_amount,expenses_currency,operation_type_id, operation_type_name,publication_plan,publish_date,status, label,title,posting_picture,posting_slug,posting_description)=>{
+//Avisos
+
+//guardar la informacion de los avisos en objetos---------------------------------------
+
+const crearAviso = (posting_id,address,zone,city,operation_type,price_amount,price_currency,expenses_amount,expenses_currency,operation_type_id, 
+                    operation_type_name,publication_plan,publish_date,status, label,title,posting_picture,posting_slug,posting_description)=>{
 
     return{
             posting_id,
@@ -67,9 +72,6 @@ const aviso3 = crearAviso(
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a neque non magna scelerisque imperdiet sed ac magna. Mauris enim lectus, varius at quam a, venenatis condimentum ante. Morbi mattis velit vel dictum varius. Suspendisse tempor velit ac rhoncus vehicula. Aenean elementum dolor purus, et mattis arcu consectetur a. Sed dictum felis id molestie accumsan. Aliquam sit amet diam feugiat, tincidunt sem vehicula, dignissim augue. Integer gravida sapien erat, in faucibus ligula cursus non. Aliquam vestibulum est nibh, vitae vehicula ipsum facilisis quis. Pellentesque ac tempus metus, non posuere dolor."
 );
 
-console.log(aviso1.expenses_amount);
-console.log(aviso2.expenses_amount);
-console.log(aviso3.expenses_amount);
-
+//-----------------------------------------------------------------------------------------------------
 
 
