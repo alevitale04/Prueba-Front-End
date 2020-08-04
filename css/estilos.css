@@ -6,7 +6,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 
 .contenedor { margin: 30px auto; max-width: 1000px; min-width: 1000px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
 
-.contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 310px; min-height: 180px; background: white; border-radius: 3px; }
+.contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 310px; min-height: 180px; background: white; border-radius: 4px; }
 .contenedor .filtro .filtrado { padding: 10px; display: flex; flex-direction: column; }
 .contenedor .filtro .filtrado .separador { background: #e0dfdf; border: 0.5px solid #e0dfdf; }
 .contenedor .filtro .filtrado .filtracion { width: 100%; height: auto; }
@@ -34,10 +34,10 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 13px; margin-left: 10px; }
 
 .contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
-.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 3px; margin-bottom: 10px; display: flex; flex-direction: row; justify-content: space-between; }
-.contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; max-height: 200px; min-height: 200px; background: #a8a8a8; }
-.contenedor .avisos .aviso .galeria .imagengaleria { max-width: 240px; min-width: 240px; max-height: 150px; min-height: 150px; background: #a9eff0; }
-.contenedor .avisos .aviso .galeria .costos { max-width: 240px; min-width: 240px; max-height: 50px; min-height: 50px; background: white; }
-.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; max-height: 200px; min-height: 200px; background: #a8a8a8; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; justify-content: space-between; }
+.contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; max-height: 200px; min-height: 200px; background: #a8a8a8; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.contenedor .avisos .aviso .galeria .imagengaleria { max-width: 240px; min-width: 240px; max-height: 150px; min-height: 150px; background: #a9eff0; border-top-left-radius: 4px; }
+.contenedor .avisos .aviso .galeria .costos { max-width: 240px; min-width: 240px; max-height: 50px; min-height: 50px; background: white; border-bottom-left-radius: 4px; }
+.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; max-height: 200px; min-height: 200px; background: #a8a8a8; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 
 /*# sourceMappingURL=estilos.css.map */
