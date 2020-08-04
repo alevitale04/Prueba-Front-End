@@ -34,7 +34,8 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 13px; margin-left: 10px; }
 
 .contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
-.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; border-top: 3px solid #b700ff; }
+
 .contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; height: 200px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
 .contenedor .avisos .aviso .galeria .imagengaleria { max-width: 250px; min-width: 250px; height: 150px; border-top-left-radius: 4px; overflow: hidden; background-image: url("../imagenes/aviso3/2.jpg"); background-size: cover; }
 .contenedor .avisos .aviso .galeria .imagengaleria .adornos { display: flex; justify-content: space-between; align-content: center; width: 240px; margin-top: 10px; }
@@ -49,6 +50,11 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .avisos .aviso .galeria .costos { max-width: 250px; min-width: 250px; height: 40px; background: white; border-bottom-left-radius: 4px; padding-left: 10px; border-right: 1px solid rgba(168, 166, 166, 0.4); margin-top: 5px; }
 .contenedor .avisos .aviso .galeria .costos .precio { width: 100%; height: 25px; font-weight: 600; font-size: 20px; }
 .contenedor .avisos .aviso .galeria .costos .expensas { width: 100%; height: 15px; font-size: 10px; font-weight: 300; padding-top: 3px; }
-.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; height: 200px; background: white; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+.contenedor .avisos .aviso .contenido { max-width: 470px; min-width: 470px; height: 197px; background: white; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+.contenedor .avisos .aviso .contenido .titulo { width: 100%; height: 35px; background: #fbc500; }
+.contenedor .avisos .aviso .contenido .ubicacion { width: 100%; height: 50px; background: #1c6c79; }
+.contenedor .avisos .aviso .contenido .descripcion { width: 100%; height: 65px; background: #85126e; }
+.contenedor .avisos .aviso .contenido .footer { width: 100%; height: 47px; background: #1b7208; }
 
 /*# sourceMappingURL=estilos.css.map */
