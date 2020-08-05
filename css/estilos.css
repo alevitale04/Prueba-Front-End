@@ -4,7 +4,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 
 .oculto { display: none; }
 
-.contenedor { margin: 30px auto; max-width: 1000px; min-width: 1000px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
+.contenedor { margin: auto; max-width: 1000px; min-width: 1000px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
 
 .contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 310px; min-height: 180px; background: white; border-radius: 4px; }
 .contenedor .filtro .filtrado { padding: 10px; display: flex; flex-direction: column; }
@@ -62,5 +62,8 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .avisos .aviso .contenido .footer .fechaPublicado { font-size: 13px; font-weight: 600; }
 .contenedor .avisos .aviso .contenido .footer .fechaPublicado i { margin-right: 3px; }
 .contenedor .avisos .aviso .contenido .footer .contactar { margin-right: 25px; background: #f0b30d; width: 90px; height: 30px; border-radius: 5px; text-align: center; padding: 5px; font-weight: 600; color: #fff; }
+
+.dark { position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+.dark .formulario { width: 650px; height: 200px; background: #fff; margin: 200px auto; border-radius: 5px; }
 
 /*# sourceMappingURL=estilos.css.map */
