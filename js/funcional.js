@@ -22,7 +22,7 @@ const aviso1 = crearAviso(
 
 const aviso2 = crearAviso(
     "44554144","San Lorenzo 1300","Güemes","Mar del Plata",2,"110.500","USD","3.000", "ARS",
-    2, "Venta","SUPERHIGHLIGHTED","18/07/2019","AVAILABLE","Disponible",
+    2, "Venta","Super destacado","18/07/2019","AVAILABLE","Disponible",
     "Dueño San Lorenzo/Güemes. LC  2 d, a balcón terraza a jardín. A nvo. cochera",
     "https://preprostatic.zonapropcdn.com/avisos/1/00/44/55/41/44/360x266/1693069558.jpg",
     "dueno-san-lorenzo-guemes.-lc-2-d-a-balcon-terraz-44554144",
@@ -30,7 +30,7 @@ const aviso2 = crearAviso(
 );
 
 const aviso3 = crearAviso(
-    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22.500","ARS",'','',3,"Alquiler Temporal","HIGHLIGHTED",
+    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22.500","ARS",'0','0',3,"Alquiler Temporal","destacado",
     "02/12/2019","RESERVED","Reservado","Juncal/Coronel Díaz. Al frente, 63m, gran balcón terraza. Todo luz",
     "https://preprostatic.zonapropcdn.com/avisos/1/00/44/18/69/48/360x266/1688441607.jpg",
     "juncal-coronel-diaz.-al-frente-63m-gran-balcon-t-44186948",
@@ -42,7 +42,7 @@ const aviso3 = crearAviso(
 
 //crear caja de avisos--------------------------------
 
-const CajadeAvisos = (...datos) =>{
+const CajadeAvisos = (datos) =>{
 
     const contenedor = document.getElementById('avisoContenedor');
 
@@ -80,7 +80,7 @@ const CajadeAvisos = (...datos) =>{
 
         //tipo de plan del aviso
         const plan = document.createElement('p');
-        const planTexto = document.createTextNode(` ${aviso1.publication_plan}`)
+        const planTexto = document.createTextNode(` ${datos.publication_plan}`)
         plan.appendChild(planTexto);
         adornos.appendChild(plan);
 
@@ -123,28 +123,68 @@ const CajadeAvisos = (...datos) =>{
         contador.appendChild(indice);
 
 
-    imagengaleria.appendChild(adornos);
-    imagengaleria.appendChild(flechas);
-    imagengaleria.appendChild(contador);
+            imagengaleria.appendChild(adornos);
+            imagengaleria.appendChild(flechas);
+            imagengaleria.appendChild(contador);
 
 
-    //se le agrega informacion a elemento de costos
+        //se le agrega informacion a elemento de costos
 
-    const precio = document.createElement('div');
-    precio.setAttribute('class', 'precio');
-    const precioTexto = document.createTextNode(`$ ${aviso1.price_amount}`)
-    precio.appendChild(precioTexto);
+        const precio = document.createElement('div');
+        precio.setAttribute('class', 'precio');
+        const precioTexto = document.createTextNode(`$ ${datos.price_amount}`)
+        precio.appendChild(precioTexto);
 
     
-    const expensas = document.createElement('div');
-    expensas.setAttribute('class', 'expensas');
-    const expensasTexto = document.createTextNode(`$ ${aviso1.expenses_amount} Expensas`)
-    expensas.appendChild(expensasTexto);
+        const expensas = document.createElement('div');
+        expensas.setAttribute('class', 'expensas');
+        const expensasTexto = document.createTextNode(`$ ${datos.expenses_amount} Expensas`)
+        expensas.appendChild(expensasTexto);
 
-    costos.appendChild(precio);
-    costos.appendChild(expensas);
+        costos.appendChild(precio);
+        costos.appendChild(expensas);
+
+    //se crea el conenido el aviso
+
+        //titulo
+        const titulo = document.createElement('div');
+        titulo.setAttribute('class', 'titulo');
+        const tituloTexto = document.createElement('p');
+        tituloTexto.setAttribute('class', 'tituloTexto');
+        const tituloContenido = document.createTextNode(`${datos.title}`);
+        tituloTexto.appendChild(tituloContenido);
+        titulo.appendChild(tituloTexto);
+
+
+
+        //ubicacion
+        const ubicacion = document.createElement('div');
+        ubicacion.setAttribute('class', 'ubicacion');
+        const ubicacionTexto = document.createElement('p');
+        ubicacionTexto.setAttribute('class', 'ubicacionTexto');
+        const ubicacionContenido = document.createTextNode(`${datos.address}, ${datos.zone}, ${datos.city}`);
+        ubicacionTexto.appendChild(ubicacionContenido);
+        ubicacion.appendChild(ubicacionTexto);
+
+
+        //descripcion
+        const descripcion = document.createElement('div');
+        descripcion.setAttribute('class', 'descripcion');
+
+    const footer = document.createElement('div');
+    footer.setAttribute('class', 'footer');
+
+    contenido.appendChild(titulo);
+    contenido.appendChild(ubicacion);
+    contenido.appendChild(descripcion);
+    contenido.appendChild(footer);
+
+
+
 
 }
 
 CajadeAvisos(aviso1);
+CajadeAvisos(aviso2);
+CajadeAvisos(aviso3);
 

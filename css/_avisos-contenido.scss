@@ -25,6 +25,10 @@
                                         font-weight: 600;
                                         padding-top: 7px;
                                         color: rgb(46, 180, 238);
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical; 
+                                        overflow: hidden;
                                     }
                             }
 
