@@ -34,7 +34,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 13px; margin-left: 10px; }
 
 .contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
-.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 200px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; border-top: 3px solid #b700ff; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 205px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; border-top: 3px solid #b700ff; }
 
 .contenedor .avisos .aviso .galeria { max-width: 250px; min-width: 250px; height: 200px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
 .contenedor .avisos .aviso .galeria .imagengaleria { max-width: 250px; min-width: 250px; height: 150px; border-top-left-radius: 4px; overflow: hidden; background-image: url("../imagenes/aviso3/2.jpg"); background-size: cover; }

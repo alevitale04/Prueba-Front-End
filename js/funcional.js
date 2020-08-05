@@ -210,7 +210,9 @@ const CajadeAvisos = (datos) =>{
 
 }
 
-CajadeAvisos(aviso1);
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
+CajadeAvisos(aviso1);
+
+
 
