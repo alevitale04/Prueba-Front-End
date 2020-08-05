@@ -12,8 +12,52 @@
 <body >
     
     <div class="dark" id="dark">
-        
-    <div class="formulario"></div>
+
+    <div class="formulario oculto">
+
+        <p class="formularioTitulo">Para ser contactado por favor ingrese los siguientes datos.</p>
+
+            <form onsubmit="return validarFormulario()" class="formBox">
+
+                <div class="formOrden">
+
+
+                    <div class="formNombre">                   
+                        <p class="nombreText">Nombre</p>
+                        <input type="text" name="nombre" value="" id="nombre" onblur="validarNombre()" class="nombre"/>
+                        <p class="errorTexto " id="errorTextonombre">Por favor ingrese un nombre valido</p>
+                    </div>
+
+                    <div class="formNumber">
+                        <p class="numberText">Telefono</p>
+                        <input type="number" name="number" value="" id="number" onblur="validarNumber()" class="number"/>
+                        <p class="errorTexto " id="errorTextonumber">Por favor ingrese un Telefono valido</p>
+                    </div>  
+                    
+
+                </div>
+
+                <div class="formEmail"> 
+                    <p class="emailText">Email</p>
+                    <input type="email" name="email" value="" id="email" onblur="validarEmail()" class="email"/>
+                    <p class="errorTexto" id="errorTextoemail">Por favor ingrese un email valido</p>
+                </div>
+
+                <div class="enviarBox">
+                    
+                    <button class="enviar">Enviar</button>
+                
+                </div>
+                
+            </form>
+
+    </div>
+
+    <div class="devolucion">
+
+        <p class="devolucionTexto">Ya has consultado a este aviso.</p>
+        <p class="devolucionBoton">Cerrar</p>
+    </div>
 
     </div>
     

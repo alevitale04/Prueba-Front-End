@@ -9,12 +9,191 @@
 
         .formulario{
 
-            width: 650px;
-            height: 200px;
+            width: 500px;
+            height: 280px;
             background: #fff;
-            margin: 200px auto;
+            margin: 130px auto;
             border-radius: 5px;
+            padding: 25px 30px 15px 25px;
+
+                .formularioTitulo{
+
+                    width: 100%;
+                    height: 30px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgb(46, 180, 238);
+                }
+
+                .formBox{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column; 
+                    
+
+                        .formOrden{
+        
+                            display: flex;
+                            margin:10PX 0;
+                            margin-bottom: 35px;
+
+                            .formNombre{
+
+                                width: 250px;
+                                margin-right: 15px;
+
+                                .nombreText{
+
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+
+                                .nombre{
+                                    box-sizing: border-box;
+                                    outline: none;
+                                    display: block;
+                                    width: 99%;
+                                    border: none;
+                                    border-bottom: 1px solid #ddd;
+                                    margin-bottom: 10px;
+                                    font: 16px Arial, Helvetica, sans-serif;
+                                    height: 25px;
+                                    color:rgb(45, 216, 210);
+                                }
+
+                                .errorTexto{
+
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    color: rgb(255, 0, 0);
+                                }
+                            }
+
+                            
+                            .formNumber{
+
+                                width: 250px;
+
+                                .numberText{
+
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+
+                                .number{
+                                    box-sizing: border-box;
+                                    outline: none;
+                                    display: block;
+                                    width: 99%;
+                                    border: none;
+                                    border-bottom: 1px solid #ddd;
+                                    margin-bottom: 10px;
+                                    font: 16px Arial, Helvetica, sans-serif;
+                                    height: 25px;
+                                    color:rgb(45, 216, 210);
+                                }
+
+                                .errorTexto{
+
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    color: rgb(255, 0, 0);
+                                }
+                                
+                            }
+                            
+                            
+                        }
+
+                        .formEmail{
+
+                            width: 100%;
+
+                            
+                                .emailText{
+
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+
+                                .email{
+                                    box-sizing: border-box;
+                                    outline: none;
+                                    display: block;
+                                    width: 99%;
+                                    border: none;
+                                    border-bottom: 1px solid #ddd;
+                                    margin-bottom: 10px;
+                                    font: 16px Arial, Helvetica, sans-serif;
+                                    height: 25px;
+                                    color:rgb(45, 216, 210);
+                                }
+
+                                .errorTexto{
+
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    color: rgb(255, 0, 0);
+                                }
+                            
+                        }
+
+                        .enviarBox{
+
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row-reverse;
+                            margin-top: 10px;
+                            
+
+                                .enviar{
+
+                                    width: 80px;
+                                    height: 30px;
+                                    background: rgb(240, 179, 13);
+                                    border: none;
+                                    color: #fff;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+
+                                        &:focus{
+                                            outline: none;
+                                            border: none;
+                                        }
+                                }
+                        }
+
+
+                }
+                
     
         }
+
+        .devolucion{
+
+        width: 500px;
+        height: 100px;
+        background: #fff;
+        margin: 130px auto;
+        border-radius: 5px;
+        padding: 25px 30px 15px 25px;
+
+            .devolucionTexto{
+
+                width: 100%;
+                height: 30px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(46, 180, 238);
+
+            }
+
+            .devolucionBoton{}
+    
+        }
+    
+        
 
 }

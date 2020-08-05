@@ -61,9 +61,29 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .avisos .aviso .contenido .footer { width: 100%; height: 47px; display: flex; justify-content: space-between; align-items: center; }
 .contenedor .avisos .aviso .contenido .footer .fechaPublicado { font-size: 13px; font-weight: 600; }
 .contenedor .avisos .aviso .contenido .footer .fechaPublicado i { margin-right: 3px; }
-.contenedor .avisos .aviso .contenido .footer .contactar { margin-right: 25px; background: #f0b30d; width: 90px; height: 30px; border-radius: 5px; text-align: center; padding: 5px; font-weight: 600; color: #fff; }
+.contenedor .avisos .aviso .contenido .footer .contactar { margin-right: 25px; background: #f0b30d; width: 90px; height: 30px; border-radius: 5px; text-align: center; padding: 5px; font-weight: 600; color: #fff; cursor: pointer; }
 
 .dark { position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
-.dark .formulario { width: 650px; height: 200px; background: #fff; margin: 200px auto; border-radius: 5px; }
+.dark .formulario { width: 500px; height: 280px; background: #fff; margin: 130px auto; border-radius: 5px; padding: 25px 30px 15px 25px; }
+.dark .formulario .formularioTitulo { width: 100%; height: 30px; font-size: 14px; font-weight: 600; color: #2eb4ee; }
+.dark .formulario .formBox { width: 100%; display: flex; flex-direction: column; }
+.dark .formulario .formBox .formOrden { display: flex; margin: 10PX 0; margin-bottom: 35px; }
+.dark .formulario .formBox .formOrden .formNombre { width: 250px; margin-right: 15px; }
+.dark .formulario .formBox .formOrden .formNombre .nombreText { font-size: 13px; font-weight: 600; }
+.dark .formulario .formBox .formOrden .formNombre .nombre { box-sizing: border-box; outline: none; display: block; width: 99%; border: none; border-bottom: 1px solid #ddd; margin-bottom: 10px; font: 16px Arial, Helvetica, sans-serif; height: 25px; color: #2dd8d2; }
+.dark .formulario .formBox .formOrden .formNombre .errorTexto { font-size: 12px; font-weight: 500; color: red; }
+.dark .formulario .formBox .formOrden .formNumber { width: 250px; }
+.dark .formulario .formBox .formOrden .formNumber .numberText { font-size: 13px; font-weight: 600; }
+.dark .formulario .formBox .formOrden .formNumber .number { box-sizing: border-box; outline: none; display: block; width: 99%; border: none; border-bottom: 1px solid #ddd; margin-bottom: 10px; font: 16px Arial, Helvetica, sans-serif; height: 25px; color: #2dd8d2; }
+.dark .formulario .formBox .formOrden .formNumber .errorTexto { font-size: 12px; font-weight: 500; color: red; }
+.dark .formulario .formBox .formEmail { width: 100%; }
+.dark .formulario .formBox .formEmail .emailText { font-size: 13px; font-weight: 600; }
+.dark .formulario .formBox .formEmail .email { box-sizing: border-box; outline: none; display: block; width: 99%; border: none; border-bottom: 1px solid #ddd; margin-bottom: 10px; font: 16px Arial, Helvetica, sans-serif; height: 25px; color: #2dd8d2; }
+.dark .formulario .formBox .formEmail .errorTexto { font-size: 12px; font-weight: 500; color: red; }
+.dark .formulario .formBox .enviarBox { width: 100%; display: flex; flex-direction: row-reverse; margin-top: 10px; }
+.dark .formulario .formBox .enviarBox .enviar { width: 80px; height: 30px; background: #f0b30d; border: none; color: #fff; font-weight: 600; font-size: 14px; border-radius: 5px; cursor: pointer; }
+.dark .formulario .formBox .enviarBox .enviar:focus { outline: none; border: none; }
+.dark .devolucion { width: 500px; height: 100px; background: #fff; margin: 130px auto; border-radius: 5px; padding: 25px 30px 15px 25px; }
+.dark .devolucion .devolucionTexto { width: 100%; height: 30px; font-size: 14px; font-weight: 600; color: #2eb4ee; }
 
 /*# sourceMappingURL=estilos.css.map */
