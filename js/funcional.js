@@ -154,6 +154,7 @@ const CajadeAvisos = (datos) =>{
         const tituloContenido = document.createTextNode(`${datos.title}`);
         tituloTexto.appendChild(tituloContenido);
         titulo.appendChild(tituloTexto);
+        contenido.appendChild(titulo);
 
 
 
@@ -165,22 +166,47 @@ const CajadeAvisos = (datos) =>{
         const ubicacionContenido = document.createTextNode(`${datos.address}, ${datos.zone}, ${datos.city}`);
         ubicacionTexto.appendChild(ubicacionContenido);
         ubicacion.appendChild(ubicacionTexto);
+        contenido.appendChild(ubicacion);
 
 
         //descripcion
         const descripcion = document.createElement('div');
         descripcion.setAttribute('class', 'descripcion');
+        const descripcionTexto = document.createElement('p');
+        descripcionTexto.setAttribute('class', 'descripcionTexto');
+        const descripcionContenido = document.createTextNode(`${datos.posting_description}`);
+        descripcionTexto.appendChild(descripcionContenido);
+        descripcion.appendChild(descripcionTexto);
+        contenido.appendChild(descripcion);
 
-    const footer = document.createElement('div');
-    footer.setAttribute('class', 'footer');
+        //footer
+        const footer = document.createElement('div');
+        footer.setAttribute('class', 'footer');
 
-    contenido.appendChild(titulo);
-    contenido.appendChild(ubicacion);
-    contenido.appendChild(descripcion);
-    contenido.appendChild(footer);
+            //fecha de publicado
+            const fechaPublicado = document.createElement('p');
+            fechaPublicado.setAttribute('class', 'fechaPublicado');
 
+            const historia = document.createElement('i');
+            historia.setAttribute('class', 'fas fa-history');
+            fechaPublicado.appendChild(historia);
 
+            const fechaContenido = document.createTextNode(`Publicado el ${datos.publish_date}`);
+            fechaPublicado.appendChild(fechaContenido);
 
+            footer.appendChild(fechaPublicado);
+
+            //Boton de contactar
+            const contactar = document.createElement('p');
+            contactar.setAttribute('class', 'contactar');
+            contactar.setAttribute('id', 'contactar');
+
+            const contactarContenido = document.createTextNode(`Contactar`);
+            contactar.appendChild(contactarContenido);
+
+            footer.appendChild(contactar);
+
+            contenido.appendChild(footer);
 
 }
 

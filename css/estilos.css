@@ -56,7 +56,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .avisos .aviso .contenido .titulo .tituloTexto { font-size: 14px; font-weight: 600; padding-top: 7px; color: #2eb4ee; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .contenedor .avisos .aviso .contenido .ubicacion { width: 100%; height: 50px; }
 .contenedor .avisos .aviso .contenido .ubicacion .ubicacionTexto { font-size: 13px; font-weight: 600; }
-.contenedor .avisos .aviso .contenido .descripcion { width: 100%; height: 65px; }
+.contenedor .avisos .aviso .contenido .descripcion { width: 100%; height: 65px; padding-right: 15px; }
 .contenedor .avisos .aviso .contenido .descripcion .descripcionTexto { font-size: 12px; font-weight: 500; color: rgba(0, 0, 0, 0.5); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .contenedor .avisos .aviso .contenido .footer { width: 100%; height: 47px; display: flex; justify-content: space-between; align-items: center; }
 .contenedor .avisos .aviso .contenido .footer .fechaPublicado { font-size: 13px; font-weight: 600; }
