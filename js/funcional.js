@@ -28,14 +28,14 @@ const aviso1 = crearAviso(
     "44557981",
     "Guido 1800","Recoleta","Capital Federal",
     1,
-    13500,"ARS",
-    3500,"ARS",
+    "13.500","ARS",
+    "3.500","ARS",
     1,"Alquiler",
-    "SIMPLE",
+    "Simple",
     "23/01/2020",
     "AVAILABLE","Disponible",
     "Guido y Callao, 2amb coc y lav todo luz 50m impec amob categoría ",
-    "https://preprostatic.zonapropcdn.com/avisos/1/00/44/55/79/81/360x266/1693121343.jpg",
+    "../imagenes/aviso1/0.jpg",
     "guido-y-callao-2amb-coc-y-lav-todo-luz-50m-impec-44557981",
     "Sed in felis nec lorem imperdiet euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse lectus mi, imperdiet et venenatis pulvinar, mattis id orci. In ut aliquam orci. Cras vitae risus posuere, ullamcorper erat vitae, tempor libero. Nulla placerat euismod lectus et maximus. Duis non magna mattis, mattis neque eu, dictum dui. Aliquam aliquam fermentum purus quis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sit amet ligula odio. Integer id tempor ipsum. Phasellus maximus quam felis, id vulputate massa ullamcorper id."
 );
@@ -44,8 +44,8 @@ const aviso2 = crearAviso(
     "44554144",
     "San Lorenzo 1300","Güemes","Mar del Plata",
     2,
-    110500,"USD",
-    3000, "ARS",
+    "110.500","USD",
+    "3.000", "ARS",
     2, "Venta",
     "SUPERHIGHLIGHTED",
     "18/07/2019",
@@ -60,7 +60,7 @@ const aviso3 = crearAviso(
     "44186948",
     "Juncal 3000","Barrio Norte","Capital Federal",
     3,
-    22500,"ARS",
+    "22.500","ARS",
     null,null,
     3,"Alquiler Temporal",
     "HIGHLIGHTED",
@@ -74,4 +74,98 @@ const aviso3 = crearAviso(
 
 //-----------------------------------------------------------------------------------------------------
 
+
+//crear caja de avisos--------------------------------
+
+const CajadeAvisos = (...datos) =>{
+
+    const contenedor = document.getElementById('avisoContenedor');
+
+    //crear el contenedor del aviso
+    const caja = document.createElement('div');
+    caja.setAttribute('class', 'aviso');
+    contenedor.appendChild(caja);
+
+    //se divide el contenedor en 2 elementos
+    const galeria = document.createElement('div');
+    galeria.setAttribute('class', 'galeria');
+
+    const contenido = document.createElement('div');
+    contenido.setAttribute('class', 'contenido');
+
+    caja.appendChild(galeria);
+    caja.appendChild(contenido);
+
+    //se divide el la galeria en 2 elementos
+    const imagengaleria = document.createElement('div');
+    imagengaleria.setAttribute('class', 'imagengaleria');
+    
+    const costos = document.createElement('div');
+    costos.setAttribute('class', 'costos');
+
+    galeria.appendChild(imagengaleria);
+    galeria.appendChild(costos);
+
+
+    //se agregan los elementos sobre la imagen
+
+    //los adornos
+    const adornos = document.createElement('div');
+    adornos.setAttribute('class', 'adornos');
+
+        //tipo de plan del aviso
+        const plan = document.createElement('p');
+        const planTexto = document.createTextNode(` ${aviso1.publication_plan}`)
+        plan.appendChild(planTexto);
+        adornos.appendChild(plan);
+
+        //corazon
+        const corazon = document.createElement('i');
+        corazon.setAttribute('class', 'fas fa-heart corazon');
+        adornos.appendChild(corazon);
+
+    //flechas
+    const flechas = document.createElement('div');
+    flechas.setAttribute('class', 'flechas');
+
+    const flecha1 = document.createElement('i');
+    flecha1.setAttribute('class', 'fas fa-chevron-left atras');
+    flecha1.setAttribute('id', 'atras');
+    flechas.appendChild(flecha1);
+
+    const flecha2 = document.createElement('i');
+    flecha2.setAttribute('class', 'fas fa-chevron-right adelante');
+    flecha2.setAttribute('id', 'adelante');
+    flechas.appendChild(flecha2);
+
+
+
+    //
+    const contador = document.createElement('div');
+    contador.setAttribute('class', 'contador');
+
+    imagengaleria.appendChild(adornos);
+    imagengaleria.appendChild(flechas);
+    imagengaleria.appendChild(contador);
+
+
+    //se le agrega informacion a elemento de costos
+
+    const precio = document.createElement('div');
+    precio.setAttribute('class', 'precio');
+    const precioTexto = document.createTextNode(`$ ${aviso1.price_amount}`)
+    precio.appendChild(precioTexto);
+
+    
+    const expensas = document.createElement('div');
+    expensas.setAttribute('class', 'expensas');
+    const expensasTexto = document.createTextNode(`$ ${aviso1.expenses_amount} Expensas`)
+    expensas.appendChild(expensasTexto);
+
+    costos.appendChild(precio);
+    costos.appendChild(expensas);
+
+}
+
+CajadeAvisos(aviso1);
 
