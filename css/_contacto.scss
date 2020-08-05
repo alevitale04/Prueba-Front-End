@@ -190,7 +190,26 @@
 
             }
 
-            .devolucionBoton{}
+            .devolucionBoton{
+
+                display: flex;
+                flex-direction: row-reverse;
+                 
+
+                    .devolucionCerrar{
+                        width: 80px;
+                        height: 30px;
+                        background: rgb(240, 179, 13);
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        text-align: center;
+                        padding: 6px;
+                    }
+
+            }
     
         }
     
