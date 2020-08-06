@@ -25,6 +25,9 @@ const postings = [
     posting_slug: "guido-y-callao-2amb-coc-y-lav-todo-luz-50m-impec-44557981", //url a la que debe apuntarse al hacer click sobre el titulo del aviso (abajo la descripcion del aviso)
     posting_description: "Sed in felis nec lorem imperdiet euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse lectus mi, imperdiet et venenatis pulvinar, mattis id orci. In ut aliquam orci. Cras vitae risus posuere, ullamcorper erat vitae, tempor libero. Nulla placerat euismod lectus et maximus. Duis non magna mattis, mattis neque eu, dictum dui. Aliquam aliquam fermentum purus quis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sit amet ligula odio. Integer id tempor ipsum. Phasellus maximus quam felis, id vulputate massa ullamcorper id."
   },
+
+
+
   {
     posting_id: "44554144",
     posting_location: {
@@ -48,6 +51,8 @@ const postings = [
     posting_slug: "dueno-san-lorenzo-guemes.-lc-2-d-a-balcon-terraz-44554144",
     posting_description: "Fusce nec pretium elit. Nullam commodo ornare massa, eget viverra erat vestibulum nec. Integer convallis est nec ex pharetra, non fermentum elit commodo. Maecenas eget ante vitae lorem interdum viverra. Aenean nisl erat, eleifend in tortor quis, ornare ultricies libero. Ut at egestas orci. Quisque laoreet ut diam quis molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque metus a libero feugiat, et lacinia odio tristique."
   },
+
+
   {
     posting_id: "44186948",
     posting_location: {
