@@ -1,17 +1,25 @@
 //Avisos
 
+const avisos =[];
+
 //guardar la informacion de los avisos en objetos---------------------------------------
 
 const crearAviso = (posting_id,address,zone,city,operation_type,price_amount,price_currency,expenses_amount,expenses_currency,operation_type_id, 
                     operation_type_name,publication_plan,publish_date,status, label,title,posting_picture,posting_slug,posting_description)=>{
+         
+                
+                avisos.push(posting_id);
+            
+            return{
+                 posting_id,address,zone,city,operation_type,price_amount, price_currency, 
+                 expenses_amount, expenses_currency,operation_type_id, operation_type_name, 
+                 publication_plan,publish_date,status, label,title,posting_picture,
+                 posting_slug, posting_description
 
-    return{
-            posting_id,address,zone,city,operation_type,price_amount, price_currency, 
-            expenses_amount, expenses_currency,operation_type_id, operation_type_name, 
-            publication_plan,publish_date,status, label,title,posting_picture,
-            posting_slug, posting_description
-    }
+                }
 }
+
+
 
 const aviso1 = crearAviso(   
     "44557981","Guido 1800","Recoleta","Capital Federal",1,"13.500","ARS","3.500","ARS",1,"Alquiler","Simple",
@@ -87,6 +95,8 @@ const CajadeAvisos = (datos) =>{
         //corazon
         const corazon = document.createElement('i');
         corazon.setAttribute('class', 'fas fa-heart corazon');
+        corazon.setAttribute('id', `corazon_${datos.posting_id}`);
+        corazon.setAttribute('onclick', `likes(${datos.posting_id})`);
         adornos.appendChild(corazon);
 
     //flechas
@@ -213,6 +223,3 @@ const CajadeAvisos = (datos) =>{
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
-
-
-
