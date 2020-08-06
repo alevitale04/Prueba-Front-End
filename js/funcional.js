@@ -230,6 +230,11 @@ const cajaAviso1 = document.getElementById(`${aviso1.posting_id}`);
 const cajaAviso2 = document.getElementById(`${aviso2.posting_id}`);
 const cajaAviso3 = document.getElementById(`${aviso3.posting_id}`);
 
+const direccion = document.getElementById('filtroDireccion');
+const compra = document.getElementById('filtroCompra');
+const alquilar = document.getElementById('filtroAlquilar');
+const temporal = document.getElementById('filtroTemporal');
+
 
 const validarTipoOperacion = () =>{
 
@@ -238,6 +243,11 @@ const validarTipoOperacion = () =>{
         cajaAviso1.style.display= 'none';
         cajaAviso2.style.display= 'flex';
         cajaAviso3.style.display= 'none';
+
+        direccion.classList.add('oculto'); 
+        compra.classList.remove('oculto'); 
+        alquilar.classList.add('oculto'); 
+        temporal.classList.add('oculto');
     }
 
     if(document.getElementById("alquilar").checked == true){
@@ -245,6 +255,11 @@ const validarTipoOperacion = () =>{
         cajaAviso2.style.display= 'none';
         cajaAviso1.style.display= 'flex';
         cajaAviso3.style.display= 'none';
+
+        direccion.classList.add('oculto'); 
+        compra.classList.add('oculto'); 
+        alquilar.classList.remove('oculto'); 
+        temporal.classList.add('oculto');
     }
 
     if(document.getElementById("temporal").checked == true){
@@ -253,6 +268,11 @@ const validarTipoOperacion = () =>{
         cajaAviso3.style.display= 'flex';
         cajaAviso1.style.display= 'none';
 
+        direccion.classList.add('oculto'); 
+        compra.classList.add('oculto'); 
+        alquilar.classList.add('oculto'); 
+        temporal.classList.remove('oculto');
+
     }
 
     if(document.getElementById("todos").checked == true){
@@ -260,6 +280,11 @@ const validarTipoOperacion = () =>{
         cajaAviso1.style.display= 'flex';
         cajaAviso2.style.display= 'flex';
         cajaAviso3.style.display= 'flex';
+
+        direccion.classList.remove('oculto'); 
+        compra.classList.remove('oculto'); 
+        alquilar.classList.remove('oculto'); 
+        temporal.classList.remove('oculto');
     }
 
 }
