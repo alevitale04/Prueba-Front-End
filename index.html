@@ -13,40 +13,33 @@
     
     <div class="dark oculto" id="dark">
 
-    <div class="formulario oculto" id="formulario">
+    <div class="formulario oculto transition" id="formulario">
 
         <p class="formularioTitulo">Para ser contactado por favor ingrese los siguientes datos.</p>
 
             <form onsubmit="return validarFormulario()" class="formBox">
-
                 <div class="formOrden">
-
-
                     <div class="formNombre">                   
                         <p class="nombreText">Nombre</p>
-                        <input type="text" name="nombre" value="" id="nombre" onblur="validarNombre()" class="nombre"/>
-                        <p class="errorTexto " id="errorTextonombre">Por favor ingrese un nombre valido</p>
+                        <input type="text" name="nombre" value="" id="nombre" onblur="validarNombre()" class="nombre" maxlength="15"/>
+                        <p class="errorTexto oculto" id="errorTextonombre">Por favor ingrese un nombre valido</p>
                     </div>
 
                     <div class="formNumber">
                         <p class="numberText">Telefono</p>
-                        <input type="number" name="number" value="" id="number" onblur="validarNumber()" class="number"/>
-                        <p class="errorTexto " id="errorTextonumber">Por favor ingrese un Telefono valido</p>
+                        <input type="text" name="number" value="" id="number" onblur="validarNumber()" class="number" maxlength="11"/>
+                        <p class="errorTexto oculto" id="errorTextonumber">Por favor ingrese un Telefono valido</p>
                     </div>  
-                    
-
                 </div>
 
                 <div class="formEmail"> 
                     <p class="emailText">Email</p>
-                    <input type="email" name="email" value="" id="email" onblur="validarEmail()" class="email"/>
-                    <p class="errorTexto" id="errorTextoemail">Por favor ingrese un email valido</p>
+                    <input type="email" name="email" value="" id="email" onblur="validarEmail()" class="email" maxlength="22"/>
+                    <p class="errorTexto oculto" id="errorTextoemail">Por favor ingrese un email valido</p>
                 </div>
 
                 <div class="enviarBox">
-                    
                     <button class="enviar">Enviar</button>
-                
                 </div>
                 
             </form>

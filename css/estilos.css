@@ -4,6 +4,10 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 
 .oculto { display: none; }
 
+.transition { animation-name: contactar; animation-duration: .5s; }
+
+@keyframes contactar { from { opacity: 0; }
+  to { opacity: 1; } }
 .contenedor { margin: auto; max-width: 1000px; min-width: 1000px; height: auto; display: flex; flex-direction: row; justify-content: space-between; padding: 5px; }
 
 .contenedor .filtro { max-width: 260px; min-width: 260px; max-height: 310px; min-height: 180px; background: white; border-radius: 4px; }

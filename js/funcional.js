@@ -283,3 +283,78 @@ const contactarAviso = () =>{
     formulario.classList.remove('oculto');
 
 };
+
+const validarFormulario = () =>{};
+
+const validarNombre = () =>{
+
+    let nombre = document.getElementById('nombre').value;
+    let formNombre = document.getElementById('nombre');
+    let error = document.getElementById('errorTextonombre');
+
+
+        //expReg -> exprecion regular
+        let expRegN = /^(?=.*?[A-Za-z])[A-Za-z+]+$/;
+        let validado = expRegN.test(nombre);
+
+    if(validado!==true || nombre.length > 15){
+
+    formNombre.style.borderBottom='2px solid rgb(255, 0, 0)';
+    error.classList.remove('oculto');
+
+    }else{
+
+    formNombre.style.borderBottom='1px solid #ddd';
+    error.classList.add('oculto');
+    }
+};
+
+const validarNumber = () =>{
+
+    let number = document.getElementById('number').value;
+    let formNumber = document.getElementById('number');
+    let error = document.getElementById('errorTextonumber');
+
+
+        //expReg -> exprecion regular
+          let expRegN = /^1*?[1-9]\d*$/;
+          let validado = expRegN.test(number);
+
+          console.log(validado)
+
+    if(validado!==true || number == 0){
+
+    formNumber.style.borderBottom='2px solid rgb(255, 0, 0)';
+    error.classList.remove('oculto');
+
+    }else{
+
+    formNumber.style.borderBottom='1px solid #ddd';
+    error.classList.add('oculto');
+    }
+};
+
+const validarEmail = () =>{
+
+    let email = document.getElementById('email').value;
+    let formEmail = document.getElementById('email');
+    let error = document.getElementById('errorTextoemail');
+
+    //expReg -> exprecion regular
+
+    let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let validado = expReg.test(email);
+
+    if(validado!==true){
+
+    formEmail.style.borderBottom='2px solid rgb(255, 0, 0)';
+    error.classList.remove('oculto');
+
+    }else{
+
+    formEmail.style.borderBottom='1px solid #ddd';
+    error.classList.add('oculto');
+    }
+
+};
+

@@ -15,3 +15,14 @@ body {
 
 	display: none;
 }
+
+.transition{
+    
+	animation-name: contactar;
+	animation-duration: .5s;
+}
+
+@keyframes contactar{
+	from {opacity: 0}
+	to { opacity: 1}
+  }
