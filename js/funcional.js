@@ -284,7 +284,18 @@ const contactarAviso = () =>{
 
 };
 
-const validarFormulario = () =>{};
+const validarFormulario = () =>{
+
+if(validarNombre() == false || validarNumber() == false || validarEmail() == false){
+
+    validarNombre();
+    validarNumber();
+    validarEmail();
+
+    return false
+}
+
+}
 
 const validarNombre = () =>{
 
@@ -294,18 +305,20 @@ const validarNombre = () =>{
 
 
         //expReg -> exprecion regular
-        let expRegN = /^(?=.*?[A-Za-z])[A-Za-z+]+$/;
+        let expRegN = /^[A-Za-z]*( [A-Za-z]+)*$/;
         let validado = expRegN.test(nombre);
 
-    if(validado!==true || nombre.length > 15){
+    if(validado!==true || nombre.length > 20 || nombre == ''){
 
     formNombre.style.borderBottom='2px solid rgb(255, 0, 0)';
     error.classList.remove('oculto');
+    return false
 
     }else{
 
     formNombre.style.borderBottom='1px solid #ddd';
     error.classList.add('oculto');
+    return true
     }
 };
 
@@ -317,20 +330,21 @@ const validarNumber = () =>{
 
 
         //expReg -> exprecion regular
-          let expRegN = /^1*?[1-9]\d*$/;
+          let expRegN = /^0*?[1-9]\d*$/;
           let validado = expRegN.test(number);
 
-          console.log(validado)
-
-    if(validado!==true || number == 0){
+    if(validado!==true || number === 0 || number == ""){
 
     formNumber.style.borderBottom='2px solid rgb(255, 0, 0)';
     error.classList.remove('oculto');
+    return false
 
     }else{
 
     formNumber.style.borderBottom='1px solid #ddd';
     error.classList.add('oculto');
+    return true
+
     }
 };
 
@@ -345,15 +359,17 @@ const validarEmail = () =>{
     let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     let validado = expReg.test(email);
 
-    if(validado!==true){
+    if(validado!==true || email == ""){
 
     formEmail.style.borderBottom='2px solid rgb(255, 0, 0)';
     error.classList.remove('oculto');
+    return false
 
     }else{
 
     formEmail.style.borderBottom='1px solid #ddd';
     error.classList.add('oculto');
+    return true
     }
 
 };
