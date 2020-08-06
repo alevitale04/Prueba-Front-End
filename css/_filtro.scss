@@ -39,7 +39,7 @@
                             .filtrados{
 
                                 width: 100%;
-                                height: auto;
+                                height: 18px;
                                 display: flex;
                                 margin-bottom: 3px;
                                 
@@ -49,12 +49,13 @@
                                         margin: 2px 3px;
                                         padding-top: 3px;
                                         background: rgb(224, 223, 223);
-                                        width: 54px;
+                                        width: 80px;
                                         height: 15px;
                                         text-align: center;
                                         border-radius: 20px;
                                         font-weight: 600;
                                         color: rgb(0, 0, 0);
+                                        cursor: pointer;
                                     }
 
                             }

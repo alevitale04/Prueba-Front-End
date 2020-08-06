@@ -11,8 +11,8 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .contenedor .filtro .filtrado .separador { background: #e0dfdf; border: 0.5px solid #e0dfdf; }
 .contenedor .filtro .filtrado .filtracion { width: 100%; height: auto; }
 .contenedor .filtro .filtrado .filtracion .filtradoActual { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 600; }
-.contenedor .filtro .filtrado .filtracion .filtrados { width: 100%; height: auto; display: flex; margin-bottom: 3px; }
-.contenedor .filtro .filtrado .filtracion .filtrados p { font-size: 8px; margin: 2px 3px; padding-top: 3px; background: #e0dfdf; width: 54px; height: 15px; text-align: center; border-radius: 20px; font-weight: 600; color: black; }
+.contenedor .filtro .filtrado .filtracion .filtrados { width: 100%; height: 18px; display: flex; margin-bottom: 3px; }
+.contenedor .filtro .filtrado .filtracion .filtrados p { font-size: 8px; margin: 2px 3px; padding-top: 3px; background: #e0dfdf; width: 80px; height: 15px; text-align: center; border-radius: 20px; font-weight: 600; color: black; cursor: pointer; }
 .contenedor .filtro .direccion { width: 100%; padding: 5px 0 10px 0; }
 .contenedor .filtro .direccion .direccionIndice { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 .contenedor .filtro .direccion .direccionIndice .direccionTexto { width: 100%; margin-top: 5px; margin-bottom: 10px; font-size: 15px; font-weight: 600; }

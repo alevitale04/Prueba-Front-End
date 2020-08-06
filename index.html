@@ -77,11 +77,11 @@
                     <p class="filtradoActual">Filtrado actual</p>
 
                     <div class="filtrados">
-
-                        <p id="filtroDireccion">Direccion</p>
-                        <p id="filtroCompra">Compra</p>
-                        <p id="filtroAlquilar">Alquilar</p>
-                        <p id="filtroTemporal">Temporal</p>
+                        
+                        <p id="filtroCompra" onclick="quitarFiltros()" class="oculto">Compra</p>
+                        <p id="filtroAlquilar" onclick="quitarFiltros()" class="oculto">Alquilar</p>
+                        <p id="filtroTemporal" onclick="quitarFiltros()" class="oculto">Temporal</p>
+                        <p id="direccionFiltro" class="oculto" onclick="quitarFiltros()"></p>
 
                     </div>
     
@@ -101,11 +101,10 @@
 
                     <div class="" id="mostrarDireccion">
 
-                    <form class=" BucarDireccion">
+                    <form class="BucarDireccion" onsubmit="return validarDireccion()">
 
                         <input type="text" id="buscador" class="buscador" placeholder="Buscar por direccion">
                         <button class="enviar"><i class="fas fa-search"></i></button>
-
 
                     </form>
 
@@ -156,5 +155,6 @@
     
 <script src="js/funcional.js"></script>
 <script src="js/like.js"></script>
+<script src="js/Filtros.js"></script>
 </body>
 </html>
