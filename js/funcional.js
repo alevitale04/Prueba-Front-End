@@ -257,6 +257,7 @@ const CajadeAvisos = (datos) =>{
             const contactar = document.createElement('p');
             contactar.setAttribute('class', 'contactar');
             contactar.setAttribute('id', 'contactar');
+            contactar.setAttribute('onclick', 'contactarAviso()');
 
             const contactarContenido = document.createTextNode(`Contactar`);
             contactar.appendChild(contactarContenido);
@@ -270,3 +271,15 @@ const CajadeAvisos = (datos) =>{
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
+
+//Formulario de contacto
+
+const contactarAviso = () =>{
+    
+    const fondoOscuro = document.getElementById('dark');
+    fondoOscuro.classList.remove('oculto');
+
+    const formulario = document.getElementById('formulario');
+    formulario.classList.remove('oculto');
+
+};
