@@ -20,15 +20,15 @@ const crearAviso = (posting_id,address,zone,city,operation_type,price_amount,pri
 }
 
 const aviso1 = crearAviso(   
-    "44557981","Guido 1800","Recoleta","Capital Federal",1,"13.500","ARS","3.500","ARS",1,"Alquiler","Simple",
+    "44557981","Guido 1800","Recoleta","Capital Federal",1,"13500","ARS","3500","ARS",1,"Alquiler","SIMPLE",
     "23/01/2020","AVAILABLE","Disponible","Guido y Callao, 2amb coc y lav todo luz 50m impec amob categoría ",
     "imagenes/aviso1/0.jpg","guido-y-callao-2amb-coc-y-lav-todo-luz-50m-impec-44557981",
     "Sed in felis nec lorem imperdiet euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse lectus mi, imperdiet et venenatis pulvinar, mattis id orci. In ut aliquam orci. Cras vitae risus posuere, ullamcorper erat vitae, tempor libero. Nulla placerat euismod lectus et maximus. Duis non magna mattis, mattis neque eu, dictum dui. Aliquam aliquam fermentum purus quis placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sit amet ligula odio. Integer id tempor ipsum. Phasellus maximus quam felis, id vulputate massa ullamcorper id."
 );
 
 const aviso2 = crearAviso(
-    "44554144","San Lorenzo 1300","Güemes","Mar Del Plata",2,"110.500","USD","3.000", "ARS",
-    2, "Venta","Superdestacado","18/07/2019","AVAILABLE","Disponible",
+    "44554144","San Lorenzo 1300","Güemes","Mar Del Plata",2,"110500","USD","3000", "ARS",
+    2, "Venta","SUPERHIGHLIGHTED","18/07/2019","AVAILABLE","Disponible",
     "Dueño San Lorenzo/Güemes. LC  2 d, a balcón terraza a jardín. A nvo. cochera",
     "imagenes/aviso2/0.jpg",
     "dueno-san-lorenzo-guemes.-lc-2-d-a-balcon-terraz-44554144",
@@ -36,7 +36,7 @@ const aviso2 = crearAviso(
 );
 
 const aviso3 = crearAviso(
-    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22.500","ARS",'0','0',3,"Alquiler Temporal","Destacado",
+    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22500","ARS",'0','0',3,"Alquiler Temporal","HIGHLIGHTED",
     "02/12/2019","RESERVED","Reservado","Juncal/Coronel Díaz. Al frente, 63m, gran balcón terraza. Todo luz",
     "imagenes/aviso3/0.jpg",
     "juncal-coronel-diaz.-al-frente-63m-gran-balcon-t-44186948",
@@ -54,9 +54,27 @@ const CajadeAvisos = (datos) =>{
 
     //crear el contenedor del aviso
     const caja = document.createElement('div');
-    caja.setAttribute('class', `aviso ${datos.publication_plan}`);
-    caja.setAttribute('id',`${datos.posting_id}`);
-    contenedor.appendChild(caja);
+
+    if(datos.publication_plan == 'SIMPLE'){
+
+        caja.setAttribute('class', `aviso Simple`);
+        caja.setAttribute('id',`${datos.posting_id}`);
+        contenedor.appendChild(caja);
+    }
+
+    if(datos.publication_plan == 'SUPERHIGHLIGHTED'){
+
+        caja.setAttribute('class', `aviso Superdestacado`);
+        caja.setAttribute('id',`${datos.posting_id}`);
+        contenedor.appendChild(caja);
+    }
+
+    if(datos.publication_plan == 'HIGHLIGHTED'){
+
+        caja.setAttribute('class', `aviso Destacado`);
+        caja.setAttribute('id',`${datos.posting_id}`);
+        contenedor.appendChild(caja);
+    }
 
     //se divide el contenedor en 2 elementos
     const galeria = document.createElement('div');
@@ -92,9 +110,27 @@ const CajadeAvisos = (datos) =>{
 
         //tipo de plan del aviso
         const plan = document.createElement('p');
-        const planTexto = document.createTextNode(` ${datos.publication_plan}`)
+
+    if(datos.publication_plan == 'SIMPLE'){
+
+        const planTexto = document.createTextNode(`Simple`)
         plan.appendChild(planTexto);
         adornos.appendChild(plan);
+    }
+
+    if(datos.publication_plan == 'SUPERHIGHLIGHTED'){
+
+        const planTexto = document.createTextNode(`Super destacado`)
+        plan.appendChild(planTexto);
+        adornos.appendChild(plan);
+    }
+
+    if(datos.publication_plan == 'HIGHLIGHTED'){
+
+        const planTexto = document.createTextNode(`Destacado`)
+        plan.appendChild(planTexto);
+        adornos.appendChild(plan);
+    }
 
         //corazon
         const corazon = document.createElement('i');
@@ -146,7 +182,14 @@ const CajadeAvisos = (datos) =>{
 
         const precio = document.createElement('div');
         precio.setAttribute('class', 'precio');
-        const precioTexto = document.createTextNode(`$ ${datos.price_amount}`)
+
+        //Agregar puntos de millares al precio
+        let valorInmueble = datos.price_amount.replace(/\./g,'');
+        valorInmueble = valorInmueble.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+        let valorFinal = valorInmueble.split('').reverse().join('').replace(/^[\.]/,'');
+
+        const precioTexto = document.createTextNode(`$ ${valorFinal}`);
+        
         precio.appendChild(precioTexto);
 
     

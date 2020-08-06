@@ -160,7 +160,6 @@ if(buscadorMayus == aviso2.city ){
     document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 }
 
-
 return false
 };
 
