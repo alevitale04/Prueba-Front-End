@@ -76,6 +76,8 @@ let buscador = document.getElementById('buscador').value;
 
 let buscadorMayus = buscador.replace(/\w\S*/g, (a)=>{return a.charAt(0).toUpperCase() + a.substr(1).toLowerCase();});
 
+console.log(buscadorMayus);
+
 if(buscadorMayus == aviso1.address || buscadorMayus == aviso1.zone || buscadorMayus == aviso1.city){
 
     document.getElementById('buscador').value = "";

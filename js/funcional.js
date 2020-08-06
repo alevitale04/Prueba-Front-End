@@ -27,7 +27,7 @@ const aviso1 = crearAviso(
 );
 
 const aviso2 = crearAviso(
-    "44554144","San Lorenzo 1300","Güemes","Mar del Plata",2,"110.500","USD","3.000", "ARS",
+    "44554144","San Lorenzo 1300","Güemes","Mar Del Plata",2,"110.500","USD","3.000", "ARS",
     2, "Venta","Superdestacado","18/07/2019","AVAILABLE","Disponible",
     "Dueño San Lorenzo/Güemes. LC  2 d, a balcón terraza a jardín. A nvo. cochera",
     "https://preprostatic.zonapropcdn.com/avisos/1/00/44/55/41/44/360x266/1693069558.jpg",
