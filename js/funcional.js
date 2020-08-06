@@ -273,16 +273,23 @@ CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
 
 //Formulario de contacto
+ const formulario = document.getElementById('formulario'); 
+ const fondoOscuro = document.getElementById('dark');
+ const devolucion = document.getElementById('devolucion');
 
 const contactarAviso = () =>{
     
-    const fondoOscuro = document.getElementById('dark');
     fondoOscuro.classList.remove('oculto');
-
-    const formulario = document.getElementById('formulario');
     formulario.classList.remove('oculto');
 
 };
+
+const cerrarDevolucion = ()=>{
+    
+    devolucion.classList.add('oculto');
+    fondoOscuro.classList.add('oculto');
+
+}
 
 const validarFormulario = () =>{
 
@@ -293,9 +300,18 @@ if(validarNombre() == false || validarNumber() == false || validarEmail() == fal
     validarEmail();
 
     return false
-}
 
 }
+
+if(validarNombre() !== false || validarNumber() !== false || validarEmail() !== false){  
+
+    formulario.classList.add('oculto');
+
+    setTimeout(()=>{devolucion.classList.remove('oculto')},400);
+
+    return false
+    
+}}
 
 const validarNombre = () =>{
 
