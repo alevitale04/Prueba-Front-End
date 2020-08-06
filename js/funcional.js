@@ -57,6 +57,7 @@ const CajadeAvisos = (datos) =>{
     //crear el contenedor del aviso
     const caja = document.createElement('div');
     caja.setAttribute('class', 'aviso');
+    caja.setAttribute('id',`${datos.posting_id}`);
     contenedor.appendChild(caja);
 
     //se divide el contenedor en 2 elementos
@@ -223,3 +224,42 @@ const CajadeAvisos = (datos) =>{
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
+
+//filtros------------------------------------------------
+const cajaAviso1 = document.getElementById(`${aviso1.posting_id}`);
+const cajaAviso2 = document.getElementById(`${aviso2.posting_id}`);
+const cajaAviso3 = document.getElementById(`${aviso3.posting_id}`);
+
+
+const validarTipoOperacion = () =>{
+
+    if(document.getElementById("comprar").checked == true){
+
+        cajaAviso1.style.display= 'none';
+        cajaAviso2.style.display= 'flex';
+        cajaAviso3.style.display= 'none';
+    }
+
+    if(document.getElementById("alquilar").checked == true){
+
+        cajaAviso2.style.display= 'none';
+        cajaAviso1.style.display= 'flex';
+        cajaAviso3.style.display= 'none';
+    }
+
+    if(document.getElementById("temporal").checked == true){
+
+        cajaAviso2.style.display= 'none';
+        cajaAviso3.style.display= 'flex';
+        cajaAviso1.style.display= 'none';
+
+    }
+
+    if(document.getElementById("todos").checked == true){
+
+        cajaAviso1.style.display= 'flex';
+        cajaAviso2.style.display= 'flex';
+        cajaAviso3.style.display= 'flex';
+    }
+
+}
