@@ -19,8 +19,6 @@ const crearAviso = (posting_id,address,zone,city,operation_type,price_amount,pri
                 }
 }
 
-
-
 const aviso1 = crearAviso(   
     "44557981","Guido 1800","Recoleta","Capital Federal",1,"13.500","ARS","3.500","ARS",1,"Alquiler","Simple",
     "23/01/2020","AVAILABLE","Disponible","Guido y Callao, 2amb coc y lav todo luz 50m impec amob categoría ",
@@ -30,7 +28,7 @@ const aviso1 = crearAviso(
 
 const aviso2 = crearAviso(
     "44554144","San Lorenzo 1300","Güemes","Mar del Plata",2,"110.500","USD","3.000", "ARS",
-    2, "Venta","Super destacado","18/07/2019","AVAILABLE","Disponible",
+    2, "Venta","Superdestacado","18/07/2019","AVAILABLE","Disponible",
     "Dueño San Lorenzo/Güemes. LC  2 d, a balcón terraza a jardín. A nvo. cochera",
     "https://preprostatic.zonapropcdn.com/avisos/1/00/44/55/41/44/360x266/1693069558.jpg",
     "dueno-san-lorenzo-guemes.-lc-2-d-a-balcon-terraz-44554144",
@@ -38,7 +36,7 @@ const aviso2 = crearAviso(
 );
 
 const aviso3 = crearAviso(
-    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22.500","ARS",'0','0',3,"Alquiler Temporal","destacado",
+    "44186948","Juncal 3000","Barrio Norte","Capital Federal",3,"22.500","ARS",'0','0',3,"Alquiler Temporal","Destacado",
     "02/12/2019","RESERVED","Reservado","Juncal/Coronel Díaz. Al frente, 63m, gran balcón terraza. Todo luz",
     "https://preprostatic.zonapropcdn.com/avisos/1/00/44/18/69/48/360x266/1688441607.jpg",
     "juncal-coronel-diaz.-al-frente-63m-gran-balcon-t-44186948",
@@ -56,7 +54,7 @@ const CajadeAvisos = (datos) =>{
 
     //crear el contenedor del aviso
     const caja = document.createElement('div');
-    caja.setAttribute('class', 'aviso');
+    caja.setAttribute('class', `aviso ${datos.publication_plan}`);
     caja.setAttribute('id',`${datos.posting_id}`);
     contenedor.appendChild(caja);
 

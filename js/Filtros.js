@@ -70,7 +70,9 @@ const validarDireccion = ()=>{
 
 let buscador = document.getElementById('buscador').value;
 
-if(buscador == aviso1.address || buscador == aviso1.zone || buscador == aviso1.city){
+let buscadorMayus = buscador.replace(/\w\S*/g, (a)=>{return a.charAt(0).toUpperCase() + a.substr(1).toLowerCase();});
+
+if(buscadorMayus == aviso1.address || buscadorMayus == aviso1.zone || buscadorMayus == aviso1.city){
 
     document.getElementById('buscador').value = "";
     document.getElementById("todos").checked = true
@@ -83,11 +85,11 @@ if(buscador == aviso1.address || buscador == aviso1.zone || buscador == aviso1.c
     temporal.classList.add('oculto');
 
     direccionFiltro.classList.remove('oculto');
-    document.getElementById('direccionFiltro').innerHTML = buscador;
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
     
 }
 
-if(buscador == aviso2.address || buscador == aviso2.zone || buscador == aviso2.city){
+if(buscadorMayus == aviso2.address || buscadorMayus == aviso2.zone || buscadorMayus == aviso2.city){
 
     document.getElementById('buscador').value = "";
     document.getElementById("todos").checked = true;
@@ -100,11 +102,11 @@ if(buscador == aviso2.address || buscador == aviso2.zone || buscador == aviso2.c
     temporal.classList.add('oculto');
 
     direccionFiltro.classList.remove('oculto');
-    document.getElementById('direccionFiltro').innerHTML = buscador;
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 
 }
 
-if(buscador == aviso3.address || buscador == aviso3.zone || buscador == aviso3.city){
+if(buscadorMayus == aviso3.address || buscadorMayus == aviso3.zone || buscadorMayus == aviso3.city){
 
     document.getElementById('buscador').value = "";
     document.getElementById("todos").checked = true;
@@ -117,10 +119,10 @@ if(buscador == aviso3.address || buscador == aviso3.zone || buscador == aviso3.c
     temporal.classList.add('oculto');
 
     direccionFiltro.classList.remove('oculto');
-    document.getElementById('direccionFiltro').innerHTML = buscador;
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 }
 
-if(buscador == aviso2.city || buscador == aviso3.city){
+if(buscadorMayus == aviso2.city || buscadorMayus == aviso3.city){
 
     document.getElementById('buscador').value = "";
     document.getElementById("todos").checked = true;
@@ -133,10 +135,10 @@ if(buscador == aviso2.city || buscador == aviso3.city){
     temporal.classList.add('oculto');
 
     direccionFiltro.classList.remove('oculto');
-    document.getElementById('direccionFiltro').innerHTML = buscador;
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 }
 
-if(buscador == aviso2.city ){
+if(buscadorMayus == aviso2.city ){
 
     document.getElementById('buscador').value = "";
     document.getElementById("todos").checked = true;
@@ -149,7 +151,7 @@ if(buscador == aviso2.city ){
     temporal.classList.add('oculto');
 
     direccionFiltro.classList.remove('oculto');
-    document.getElementById('direccionFiltro').innerHTML = buscador;
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 }
 
 
