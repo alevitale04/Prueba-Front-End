@@ -4,7 +4,17 @@
 
             max-width: 720px;
             min-width: 720px;
-            height: auto;
+            height: auto;   
+            
+            .noexiste{
+                
+                color: rgb(138, 138, 138);
+                margin: 10% 30%;
+                width: 300px;
+                text-align: center;
+                font-weight: 900;
+                font-size: 30px;
+            }
 
                 .aviso{
 
@@ -16,7 +26,6 @@
                     margin-bottom: 10px;
                     display: flex;
                     flex-direction: row;
-                    // border-top: 3px solid rgb(183, 0, 255);
                 }
 
                 .Simple{

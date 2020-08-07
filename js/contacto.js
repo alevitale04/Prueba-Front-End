@@ -135,7 +135,6 @@ const enviado = document.getElementById('enviado');
     
  }}
 
-
  const cerrarDevolucion = ()=>{
    
     devolucion.classList.add('oculto');

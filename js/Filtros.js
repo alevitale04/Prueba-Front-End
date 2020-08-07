@@ -8,6 +8,7 @@ const cajaAviso3 = document.getElementById(`${aviso3.posting_id}`);
 const compra = document.getElementById('filtroCompra');
 const alquilar = document.getElementById('filtroAlquilar');
 const temporal = document.getElementById('filtroTemporal');
+const noexiste = document.getElementById('noexiste');
 
 const validarTipoOperacion = () =>{
 
@@ -18,6 +19,7 @@ const validarTipoOperacion = () =>{
         cajaAviso3.style.display= 'none';
 
         compra.classList.remove('oculto'); 
+        noexiste.classList.add('oculto');
         alquilar.classList.add('oculto'); 
         temporal.classList.add('oculto');
         direccionFiltro.classList.add('oculto');
@@ -30,6 +32,7 @@ const validarTipoOperacion = () =>{
         cajaAviso3.style.display= 'none';
  
         compra.classList.add('oculto'); 
+        noexiste.classList.add('oculto');
         alquilar.classList.remove('oculto'); 
         temporal.classList.add('oculto');
         direccionFiltro.classList.add('oculto');
@@ -42,6 +45,7 @@ const validarTipoOperacion = () =>{
         cajaAviso1.style.display= 'none';
 
         compra.classList.add('oculto'); 
+        noexiste.classList.add('oculto');
         alquilar.classList.add('oculto'); 
         temporal.classList.remove('oculto');
         direccionFiltro.classList.add('oculto');
@@ -55,6 +59,7 @@ const validarTipoOperacion = () =>{
         cajaAviso3.style.display= 'flex';
         
         compra.classList.add('oculto'); 
+        noexiste.classList.add('oculto');
         alquilar.classList.add('oculto'); 
         temporal.classList.add('oculto');
         direccionFiltro.classList.add('oculto');
@@ -81,6 +86,7 @@ if(buscadorMayus == aviso1.address || buscadorMayus == aviso1.zone || buscadorMa
     cajaAviso3.style.display= 'none';
 
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -98,6 +104,7 @@ if(buscadorMayus == aviso2.address || buscadorMayus == aviso2.zone || buscadorMa
     cajaAviso3.style.display= 'none';
 
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -115,6 +122,7 @@ if(buscadorMayus == aviso3.address || buscadorMayus == aviso3.zone || buscadorMa
     cajaAviso3.style.display= 'flex'; 
  
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -131,6 +139,7 @@ if(buscadorMayus == aviso2.city || buscadorMayus == aviso3.city){
     cajaAviso3.style.display= 'flex'; 
 
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -147,6 +156,7 @@ if(buscadorMayus == aviso2.city ){
     cajaAviso3.style.display= 'none'; 
 
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -165,6 +175,7 @@ if(buscadorMayus !== aviso1.address && buscadorMayus !== aviso1.zone && buscador
     cajaAviso3.style.display= 'none';
 
     compra.classList.add('oculto'); 
+    noexiste.classList.remove('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
@@ -181,6 +192,7 @@ if(buscadorMayus == '') {
     cajaAviso3.style.display= 'flex';
 
     compra.classList.add('oculto'); 
+    noexiste.classList.add('oculto');
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
 
