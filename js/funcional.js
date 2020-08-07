@@ -248,7 +248,27 @@ const CajadeAvisos = (datos) =>{
             historia.setAttribute('class', 'fas fa-history');
             fechaPublicado.appendChild(historia);
 
-            const fechaContenido = document.createTextNode(`Publicado el ${datos.publish_date}`);
+            //calcular dias trascurridos desde su publicacion
+
+            const tiempoPublicado = (datos) =>{
+
+                let fecha = datos;
+                fecha = new Date(fecha);
+                
+                const fechaactual = new Date();
+                
+                const inicio =  new Date(fecha).getTime();
+                
+                const final =  new Date(fechaactual).getTime();
+                
+                
+                const diferencia = final - inicio;
+                
+                return parseInt((diferencia/(1000*60*60*24)));
+                
+            };
+
+            const fechaContenido = document.createTextNode(`Publicado hace ${tiempoPublicado(datos.publish_date)} dias`);
             fechaPublicado.appendChild(fechaContenido);
 
             footer.appendChild(fechaPublicado);
@@ -271,26 +291,6 @@ const CajadeAvisos = (datos) =>{
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
-
-const tiempoPublicado = (datos) =>{
-
-let fecha = datos.publish_date;
-fecha = new Date(fecha);
-
-const fechaactual = new Date();
-
-const inicio =  new Date(fecha).getTime();
-
-const final =  new Date(fechaactual).getTime();
-
-
-const diferencia = final - inicio;
-
-return parseInt((diferencia/(1000*60*60*24)));
-
-};
-
-console.log(tiempoPublicado(aviso2))
 
 
 

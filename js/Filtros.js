@@ -1,9 +1,5 @@
 //filtros------------------------------------------------
 
-//Expandir o contraer filtros--------------------------
-
-
-
 //tipo de operacion----------------------------------------------
 const cajaAviso1 = document.getElementById(`${aviso1.posting_id}`);
 const cajaAviso2 = document.getElementById(`${aviso2.posting_id}`);
