@@ -92,6 +92,7 @@ const CajadeAvisos = (datos) =>{
 
     const img  = document.createElement('img');
     img.setAttribute('class','imagen');
+    img.setAttribute('id',`imagen_${datos.posting_id}`);
     img.setAttribute('src',` ${datos.posting_picture}`);
     imagengaleria.appendChild(img);
     
@@ -145,12 +146,12 @@ const CajadeAvisos = (datos) =>{
 
     const flecha1 = document.createElement('i');
     flecha1.setAttribute('class', 'fas fa-chevron-left atras');
-    flecha1.setAttribute('id', 'atras');
+    flecha1.setAttribute('id', `atras_${datos.posting_id}`);
     flechas.appendChild(flecha1);
 
     const flecha2 = document.createElement('i');
     flecha2.setAttribute('class', 'fas fa-chevron-right adelante');
-    flecha2.setAttribute('id', 'adelante');
+    flecha2.setAttribute('id', `adelante_${datos.posting_id}`);
     flechas.appendChild(flecha2);
 
 
@@ -292,7 +293,69 @@ CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
 
+//slider---------------------------------------
 
+let imagenactual = 0;
+
+
+const slider = (datos,index, aviso) =>{
+
+
+    if(imagenactual >= 3){
+
+        imagenactual = 0
+
+    }
+
+    if(imagenactual < 0){
+
+        imagenactual = 2 
+
+    }
+
+
+let imagen = document.getElementById(`imagen_${datos.posting_id}`);
+
+imagen.src = `imagenes/aviso${aviso}/${imagenactual}.jpg`;
+
+};
+
+//aviso1
+
+slider(aviso1,imagenactual,1);
+
+document.getElementById(`atras_${aviso1.posting_id}`).addEventListener('click', () => {
+slider(aviso1,--imagenactual,1);
+});
+
+document.getElementById(`adelante_${aviso1.posting_id}`).addEventListener('click', () => {
+slider(aviso1,++imagenactual,1);
+});
+
+
+//aviso2
+
+slider(aviso2,imagenactual,2);
+
+document.getElementById(`atras_${aviso2.posting_id}`).addEventListener('click', () => {
+slider(aviso2,--imagenactual,2);
+});
+
+document.getElementById(`adelante_${aviso2.posting_id}`).addEventListener('click', () => {
+slider(aviso2,++imagenactual,2);
+});
+
+//aviso3
+
+slider(aviso3,imagenactual,3);
+
+document.getElementById(`atras_${aviso3.posting_id}`).addEventListener('click', () => {
+slider(aviso3,--imagenactual,3);
+});
+
+document.getElementById(`adelante_${aviso3.posting_id}`).addEventListener('click', () => {
+slider(aviso3,++imagenactual,3);
+});
 
 
                  
