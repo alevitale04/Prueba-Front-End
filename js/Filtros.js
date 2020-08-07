@@ -72,8 +72,6 @@ let buscador = document.getElementById('buscador').value;
 
 let buscadorMayus = buscador.replace(/\w\S*/g, (a)=>{return a.charAt(0).toUpperCase() + a.substr(1).toLowerCase();});
 
-console.log(buscadorMayus);
-
 if(buscadorMayus == aviso1.address || buscadorMayus == aviso1.zone || buscadorMayus == aviso1.city){
 
     document.getElementById('buscador').value = "";
@@ -156,8 +154,47 @@ if(buscadorMayus == aviso2.city ){
     document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
 }
 
+if(buscadorMayus !== aviso1.address && buscadorMayus !== aviso1.zone && buscadorMayus !== aviso1.city && 
+    buscadorMayus !== aviso2.address && buscadorMayus !== aviso2.zone && buscadorMayus !== aviso2.city &&
+    buscadorMayus !== aviso3.address && buscadorMayus !== aviso3.zone && buscadorMayus !== aviso3.city){
+
+    document.getElementById('buscador').value = "";
+    document.getElementById("todos").checked = true
+    cajaAviso2.style.display= 'none';
+    cajaAviso1.style.display= 'none';
+    cajaAviso3.style.display= 'none';
+
+    compra.classList.add('oculto'); 
+    alquilar.classList.add('oculto'); 
+    temporal.classList.add('oculto');
+
+    direccionFiltro.classList.remove('oculto');
+    document.getElementById('direccionFiltro').innerHTML = buscadorMayus;
+    
+}
+
+if(buscadorMayus == '') {
+
+    document.getElementById("todos").checked = true
+    cajaAviso2.style.display= 'flex';
+    cajaAviso1.style.display= 'flex';
+    cajaAviso3.style.display= 'flex';
+
+    compra.classList.add('oculto'); 
+    alquilar.classList.add('oculto'); 
+    temporal.classList.add('oculto');
+
+    direccionFiltro.classList.add('oculto');
+    return false
+    
+}
+
+
+
 return false
 };
+
+
 
 const quitarFiltros = ()=>{
 
