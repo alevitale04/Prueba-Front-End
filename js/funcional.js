@@ -168,7 +168,7 @@ const CajadeAvisos = (datos) =>{
         //se agrega el indice y la cantidad de imagenes
         const indice = document.createElement('p');
         indice.setAttribute('class', 'indice');
-        indice.setAttribute('id', 'indice');
+        indice.setAttribute('id',`indice_${datos.posting_id}`);
         const indiceTexto = document.createTextNode(`1 / 3`)
         indice.appendChild(indiceTexto);
         contador.appendChild(indice);
@@ -314,9 +314,11 @@ const slider = (datos,index, aviso) =>{
     }
 
 
-let imagen = document.getElementById(`imagen_${datos.posting_id}`);
+let imagen = document.getElementById(`imagen_${datos.posting_id}`).src = `imagenes/aviso${aviso}/${imagenactual}.jpg`;
 
-imagen.src = `imagenes/aviso${aviso}/${imagenactual}.jpg`;
+
+
+let indice = document.getElementById(`indice_${datos.posting_id}`).innerHTML = `${imagenactual + 1 } / 3`
 
 };
 

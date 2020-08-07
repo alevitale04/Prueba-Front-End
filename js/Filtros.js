@@ -169,7 +169,7 @@ if(buscadorMayus !== aviso1.address && buscadorMayus !== aviso1.zone && buscador
     buscadorMayus !== aviso3.address && buscadorMayus !== aviso3.zone && buscadorMayus !== aviso3.city){
 
     document.getElementById('buscador').value = "";
-    document.getElementById("todos").checked = true
+    document.getElementById("todos").checked = false;
     cajaAviso2.style.display= 'none';
     cajaAviso1.style.display= 'none';
     cajaAviso3.style.display= 'none';
@@ -186,7 +186,7 @@ if(buscadorMayus !== aviso1.address && buscadorMayus !== aviso1.zone && buscador
 
 if(buscadorMayus == '') {
 
-    document.getElementById("todos").checked = true
+    document.getElementById("todos").checked = false;
     cajaAviso2.style.display= 'flex';
     cajaAviso1.style.display= 'flex';
     cajaAviso3.style.display= 'flex';
