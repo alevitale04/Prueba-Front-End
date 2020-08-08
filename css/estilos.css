@@ -39,7 +39,7 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 
 .contenedor .avisos { max-width: 720px; min-width: 720px; height: auto; }
 .contenedor .avisos .noexiste { color: #8a8a8a; margin: 10% 30%; width: 300px; text-align: center; font-weight: 900; font-size: 30px; }
-.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 205px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; }
+.contenedor .avisos .aviso { max-width: 720px; min-width: 720px; height: 205px; background: white; border-radius: 4px; margin-bottom: 10px; display: flex; flex-direction: row; box-shadow: 57px 40px 72px -68px rgba(0, 0, 0, 0.77); }
 .contenedor .avisos .Simple { border-top: 1px solid rgba(0, 0, 0, 0); }
 .contenedor .avisos .Destacado { border-top: 3px solid #14fa8b; }
 .contenedor .avisos .Superdestacado { border-top: 3px solid #b700ff; }
