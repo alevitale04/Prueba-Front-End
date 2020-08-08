@@ -1,118 +1,83 @@
 @media screen and (max-width:997px){
 
     .contenedor{
-        max-width: 900px;
-        min-width: 900px;
+
+        flex-direction: column;
+        margin: auto;
+        max-width: 720px;
+        min-width: 720px;
+        padding: 5px;
 
         .filtro{
 
-            max-width: 160px;
-            min-width: 160px;
+            max-width: 720px;
+            min-width: 720px;
+            max-height: 160px;
+            min-height: 160px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
 
                .filtrado{
 
+                   padding: 10px;
+                   flex-direction: row;
 
                        .filtracion{
 
-                           .filtradoActual{
+                           width: 240px;
+                           height: auto;
 
-                                font-size: 13px;
-                               
+                           .filtradoActual{
+                               font-size: 15px;
+                               text-align: center;
+
                            }
-                   
+
+                           .filtrados{
+                               display: flex;
+                               justify-content: center;
+                               margin-top: 30px;
+                            
+                           }
+                           
                        }
 
                }
 
+
                .direccion{
-
-                       .direccionIndice{
-
-                               .direccionTexto{
-
-                                   font-size: 13px;
-
-                               }
-
-                       }
-
-                       .BucarDireccion{
-
-                               input[type="text"]{
-
-                                   height: 30px;
-                                   padding: 10px;
-                                   border-radius: 5px;
-                                   border: 1px solid rgba(0, 0, 0, 0.3);
-                                   width: 90px;
-                                   font-size: 10px;
-                                   cursor: pointer;
-
-                                   &:focus{
-                                   outline: none;
-                                   border-radius: 5px;
-                                   border: 1px solid rgba(0, 0, 0, 0.3);
-
-                                   }
-
-                                       
-                               } 
-
-                               .enviar{
-
-                                   width: 30px;
-
-                                       i{
-
-                                           font-size: 10px;
-                                       }
-
-                                       &:focus{
-                                           outline: none;
-                                           border-radius: 5px;
-                                           border: 1px solid rgba(0, 0, 0, 0.3);
-       
-                                           }
-                               }
-
-                       }
+                   width: 240px;
+                   padding: 0px 15px ;
 
                }
 
                .tipoOperacion{
+                   flex-direction: column;
+                   padding: 5px 15px;
+                   width: 240px;
 
                    .operacionIndice{
 
+                       display: flex;
+                       flex-direction: row;
+                       justify-content: space-between;
+                       align-items: center;
+
+
                            .operacionTexto{
-
-                               margin-bottom: 13px;
-                               font-size: 13px;
-
-                           }
-
-                           .operacionflechaAbajo{
-
                                margin-top: 0px;
-
                            }
 
                    }
 
                    .opciones{
 
-                           .opcion{
-
-                                   .tituloOpcion{
-
-                                       font-size: 11px;
-                                       margin-left: 11px;
-                                   }
-                           }
+                       display: flex;
+                       flex-direction: column;
 
                    }
                }
        }
-
-       
     }
+
 }
