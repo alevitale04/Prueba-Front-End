@@ -82,7 +82,6 @@ const CajadeAvisos = (datos) =>{
         plan.appendChild(planTexto);
         adornos.appendChild(plan);
     }
-
         //corazon
         const corazon = document.createElement('i');
         corazon.setAttribute('class', 'fas fa-heart corazon');
@@ -138,10 +137,8 @@ const CajadeAvisos = (datos) =>{
         let valorFinal = valorInmueble.split('').reverse().join('').replace(/^[\.]/,'');
 
         const precioTexto = document.createTextNode(`$ ${valorFinal}`);
-        
         precio.appendChild(precioTexto);
 
-    
         const expensas = document.createElement('div');
         expensas.setAttribute('class', 'expensas');
         const expensasTexto = document.createTextNode(`$ ${datos.expenses_amount} Expensas`)
@@ -198,8 +195,8 @@ const CajadeAvisos = (datos) =>{
 
                      const tiempoPublicado = (datos) =>{
 
-                         let fecha = datos;
-                         fecha = new Date(fecha);
+                            let fecha = datos;
+                            fecha = new Date(fecha);
                 
                             const fechaactual = new Date();  
                             const inicio =  new Date(fecha).getTime();
@@ -210,7 +207,6 @@ const CajadeAvisos = (datos) =>{
 
             const fechaContenido = document.createTextNode(`Publicado hace ${tiempoPublicado(datos.publish_date)} dias`);
             fechaPublicado.appendChild(fechaContenido);
-
             footer.appendChild(fechaPublicado);
 
             //Boton de contactar
@@ -221,9 +217,7 @@ const CajadeAvisos = (datos) =>{
 
             const contactarContenido = document.createTextNode(`Contactar`);
             contactar.appendChild(contactarContenido);
-
             footer.appendChild(contactar);
-
             contenido.appendChild(footer);
 
 }
