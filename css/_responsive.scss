@@ -1,0 +1,118 @@
+@media screen and (max-width:997px){
+
+    .contenedor{
+        max-width: 900px;
+        min-width: 900px;
+
+        .filtro{
+
+            max-width: 160px;
+            min-width: 160px;
+
+               .filtrado{
+
+
+                       .filtracion{
+
+                           .filtradoActual{
+
+                                font-size: 13px;
+                               
+                           }
+                   
+                       }
+
+               }
+
+               .direccion{
+
+                       .direccionIndice{
+
+                               .direccionTexto{
+
+                                   font-size: 13px;
+
+                               }
+
+                       }
+
+                       .BucarDireccion{
+
+                               input[type="text"]{
+
+                                   height: 30px;
+                                   padding: 10px;
+                                   border-radius: 5px;
+                                   border: 1px solid rgba(0, 0, 0, 0.3);
+                                   width: 90px;
+                                   font-size: 10px;
+                                   cursor: pointer;
+
+                                   &:focus{
+                                   outline: none;
+                                   border-radius: 5px;
+                                   border: 1px solid rgba(0, 0, 0, 0.3);
+
+                                   }
+
+                                       
+                               } 
+
+                               .enviar{
+
+                                   width: 30px;
+
+                                       i{
+
+                                           font-size: 10px;
+                                       }
+
+                                       &:focus{
+                                           outline: none;
+                                           border-radius: 5px;
+                                           border: 1px solid rgba(0, 0, 0, 0.3);
+       
+                                           }
+                               }
+
+                       }
+
+               }
+
+               .tipoOperacion{
+
+                   .operacionIndice{
+
+                           .operacionTexto{
+
+                               margin-bottom: 13px;
+                               font-size: 13px;
+
+                           }
+
+                           .operacionflechaAbajo{
+
+                               margin-top: 0px;
+
+                           }
+
+                   }
+
+                   .opciones{
+
+                           .opcion{
+
+                                   .tituloOpcion{
+
+                                       font-size: 11px;
+                                       margin-left: 11px;
+                                   }
+                           }
+
+                   }
+               }
+       }
+
+       
+    }
+}

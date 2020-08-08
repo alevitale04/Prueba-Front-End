@@ -97,4 +97,17 @@ body { font-family: 'Roboto', sans-serif; font-size: 16px; background: #e2e1e1; 
 .dark .devolucion .devolucionBoton { display: flex; flex-direction: row-reverse; }
 .dark .devolucion .devolucionBoton .devolucionCerrar { width: 80px; height: 30px; background: #f0b30d; color: #fff; font-weight: 600; font-size: 14px; border-radius: 5px; cursor: pointer; text-align: center; padding: 6px; }
 
+@media screen and (max-width: 997px) { .contenedor { max-width: 900px; min-width: 900px; }
+  .contenedor .filtro { max-width: 160px; min-width: 160px; }
+  .contenedor .filtro .filtrado .filtracion .filtradoActual { font-size: 13px; }
+  .contenedor .filtro .direccion .direccionIndice .direccionTexto { font-size: 13px; }
+  .contenedor .filtro .direccion .BucarDireccion input[type="text"] { height: 30px; padding: 10px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); width: 90px; font-size: 10px; cursor: pointer; }
+  .contenedor .filtro .direccion .BucarDireccion input[type="text"]:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
+  .contenedor .filtro .direccion .BucarDireccion .enviar { width: 30px; }
+  .contenedor .filtro .direccion .BucarDireccion .enviar i { font-size: 10px; }
+  .contenedor .filtro .direccion .BucarDireccion .enviar:focus { outline: none; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.3); }
+  .contenedor .filtro .tipoOperacion .operacionIndice .operacionTexto { margin-bottom: 13px; font-size: 13px; }
+  .contenedor .filtro .tipoOperacion .operacionIndice .operacionflechaAbajo { margin-top: 0px; }
+  .contenedor .filtro .tipoOperacion .opciones .opcion .tituloOpcion { font-size: 11px; margin-left: 11px; } }
+
 /*# sourceMappingURL=estilos.css.map */
