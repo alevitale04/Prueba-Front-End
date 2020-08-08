@@ -201,12 +201,8 @@ if(buscadorMayus == '') {
     
 }
 
-
-
 return false
 };
-
-
 
 const quitarFiltros = ()=>{
 
@@ -220,6 +216,45 @@ const quitarFiltros = ()=>{
     alquilar.classList.add('oculto'); 
     temporal.classList.add('oculto');
     direccionFiltro.classList.add('oculto');
-
-
 }
+
+//ocultar o mostra filtro de direccion
+const mostrarDireccion = document.getElementById('mostrarDireccion');
+
+    document.getElementById(`direccionAbajo`).addEventListener('click', () => {
+    
+        mostrarDireccion.classList.add('oculto');
+        document.getElementById(`direccionAbajo`).classList.add('oculto');
+        document.getElementById(`direccionArriba`).classList.remove('oculto');
+
+    });
+
+    document.getElementById(`direccionArriba`).addEventListener('click', () => {
+    
+        mostrarDireccion.classList.remove('oculto');
+        document.getElementById(`direccionAbajo`).classList.remove('oculto');
+        document.getElementById(`direccionArriba`).classList.add('oculto');
+
+    });
+
+
+    //ocultar o mostra filtro de tipo de operacion
+
+    const mostrarOpciones = document.getElementById('mostrarOpciones');
+
+    document.getElementById(`operacionAbajo`).addEventListener('click', () => {
+    
+        mostrarOpciones.classList.add('oculto');
+        document.getElementById(`operacionAbajo`).classList.add('oculto');
+        document.getElementById(`operacionArriba`).classList.remove('oculto');
+
+    });
+
+    document.getElementById(`operacionArriba`).addEventListener('click', () => {
+    
+        mostrarOpciones.classList.remove('oculto');
+        document.getElementById(`operacionAbajo`).classList.remove('oculto');
+        document.getElementById(`operacionArriba`).classList.add('oculto');
+
+    });
+    

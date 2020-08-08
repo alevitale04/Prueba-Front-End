@@ -1,5 +1,4 @@
 //crear caja de avisos--------------------------------
-
 const CajadeAvisos = (datos) =>{
 
     const contenedor = document.getElementById('avisoContenedor');
@@ -54,7 +53,6 @@ const CajadeAvisos = (datos) =>{
     galeria.appendChild(imagengaleria);
     galeria.appendChild(costos);
 
-
     //se agregan los elementos sobre la imagen
 
     //los adornos
@@ -105,8 +103,6 @@ const CajadeAvisos = (datos) =>{
     flecha2.setAttribute('class', 'fas fa-chevron-right adelante');
     flecha2.setAttribute('id', `adelante_${datos.posting_id}`);
     flechas.appendChild(flecha2);
-
-
 
     //contador
     const contador = document.createElement('div');
@@ -166,8 +162,6 @@ const CajadeAvisos = (datos) =>{
         titulo.appendChild(tituloTexto);
         contenido.appendChild(titulo);
 
-
-
         //ubicacion
         const ubicacion = document.createElement('div');
         ubicacion.setAttribute('class', 'ubicacion');
@@ -177,7 +171,6 @@ const CajadeAvisos = (datos) =>{
         ubicacionTexto.appendChild(ubicacionContenido);
         ubicacion.appendChild(ubicacionTexto);
         contenido.appendChild(ubicacion);
-
 
         //descripcion
         const descripcion = document.createElement('div');
@@ -203,23 +196,17 @@ const CajadeAvisos = (datos) =>{
 
             //calcular dias trascurridos desde su publicacion
 
-            const tiempoPublicado = (datos) =>{
+                     const tiempoPublicado = (datos) =>{
 
-                let fecha = datos;
-                fecha = new Date(fecha);
+                         let fecha = datos;
+                         fecha = new Date(fecha);
                 
-                const fechaactual = new Date();
-                
-                const inicio =  new Date(fecha).getTime();
-                
-                const final =  new Date(fechaactual).getTime();
-                
-                
-                const diferencia = final - inicio;
-                
-                return parseInt((diferencia/(1000*60*60*24)));
-                
-            };
+                            const fechaactual = new Date();  
+                            const inicio =  new Date(fecha).getTime();
+                            const final =  new Date(fechaactual).getTime();
+                            const diferencia = final - inicio;
+                            return parseInt((diferencia/(1000*60*60*24)));
+                    };
 
             const fechaContenido = document.createTextNode(`Publicado hace ${tiempoPublicado(datos.publish_date)} dias`);
             fechaPublicado.appendChild(fechaContenido);
@@ -244,7 +231,3 @@ const CajadeAvisos = (datos) =>{
 CajadeAvisos(aviso2);
 CajadeAvisos(aviso3);
 CajadeAvisos(aviso1);
-
-
-                 
-                
